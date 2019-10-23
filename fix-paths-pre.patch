@@ -1,0 +1,13 @@
+diff --git a/core/autoload/config.el b/core/autoload/config.el
+index 6bb9ae300..81ab62860 100644
+--- a/core/autoload/config.el
++++ b/core/autoload/config.el
+@@ -20,7 +20,7 @@
+ (defun doom/find-file-in-private-config ()
+   "Search for a file in `doom-private-dir' inside nixos-config."
+   (interactive)
+-  (doom-project-find-file doom-private-dir))
++  (doom-project-find-file "@private@"))
+ 
+ ;;;###autoload
+ (defun doom/reload ()

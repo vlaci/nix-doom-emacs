@@ -39,8 +39,8 @@ let
     src = fetchFromGitHub {
       owner = "hlissner";
       repo = "doom-emacs";
-      rev = "22ae9cca15f5aa9215cf0ec2c7b0b78d64deddc0";
-      sha256 = "0nya6qf2v0snd4zskxxradqdpiylpx3lxfrfi7xs04yb39ma99pn";
+      rev = "eb2a67d05ff4b178fedabd36ce448191cce8d6bb";
+      sha256 = "05nhsn4q2bbs8m7x88ci2k7cq7hc7ql6xkyv0hmz762ip8g1jvlp";
     };
     phases = ["unpackPhase" "patchPhase" "installPhase"];
     patches = [

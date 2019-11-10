@@ -9,12 +9,3 @@
                                   :around (lambda (orig-print &rest r)
                                             (let ((noninteractive nil))
                                               (apply orig-print r))))))
-
-
-
-(advice-add 'doom-call-process
-            :before (lambda (&rest r)
-                    (message "> call-process %s" r)))
-(advice-add 'doom-call-process
-            :after (lambda (&rest r)
-                    (message "< call-process %s" r)))

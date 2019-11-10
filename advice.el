@@ -9,3 +9,8 @@
                                   :around (lambda (orig-print &rest r)
                                             (let ((noninteractive nil))
                                               (apply orig-print r))))))
+
+(advice-add 'y-or-n-p
+            :override (lambda (q)
+                        (message "%s \n--> answering NO" q)
+                        nil))

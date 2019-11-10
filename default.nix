@@ -87,9 +87,8 @@ let
             emacsPackages.overrideScope' overrides;
         emacsLoadFiles = [ ./advice.el ];
         emacsArgs = [
+          "--"
           "install"
-          "--no-fonts"
-          "--no-env"
         ];
 
       # Need to reference a store path here, as byte-compilation will bake-in

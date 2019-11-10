@@ -81,7 +81,7 @@ let
         emacsPackages =
           if bundledPackages then
             let
-              epkgs = emacs-overlay.emacsPackagesNgFor emacsPackages.emacs;
+              epkgs = emacs-overlay.emacsPackagesFor emacsPackages.emacs;
             in epkgs.overrideScope' overrides
           else
             emacsPackages.overrideScope' overrides;

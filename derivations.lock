@@ -43,12 +43,12 @@
         "args": {
             "owner": "nix-community",
             "repo": "emacs-overlay",
-            "rev": "daf9002714e9adfa415a385d939539524482142d",
-            "sha256": "1w3zyk4847h1avd50cs1r7apw37bsyslv17vjkdk4h0r4gqz9cvs"
+            "rev": "0bd32c063118ddc95d1a73ccd01b51a2d6dda24e",
+            "sha256": "1yc1az5l6073x1amk4g3rvfd98wsq3z3jvh2l7crp8q6wq9rndpa"
         },
         "meta": {
-            "updated": "2019-10-25T22:28:28+00:00",
-            "rev": "daf9002714e9adfa415a385d939539524482142d"
+            "updated": "2019-11-10T14:33:57+00:00",
+            "rev": "0bd32c063118ddc95d1a73ccd01b51a2d6dda24e"
         }
     }
 }

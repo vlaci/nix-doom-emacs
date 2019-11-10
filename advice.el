@@ -2,7 +2,7 @@
 (advice-add 'nix-straight-get-used-packages
             :before (lambda (&rest r)
                       (message "[nix-doom-emacs] Advising doom installer to gather packages to install...")
-                      (advice-add 'doom-reload-autoloads
+                      (advice-add 'doom-cli-reload-autoloads
                                   :override (lambda (&optional file force-p)
                                               (message "[nix-doom-emacs] Skipping generating autoloads...")))
                       (advice-add 'doom--format-print

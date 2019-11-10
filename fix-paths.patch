@@ -1,25 +1,15 @@
-diff --git a/bin/doom b/bin/doom
-index bd381e5ab..37cc69569 100755
---- a/bin/doom
-+++ b/bin/doom
-@@ -6,7 +6,7 @@
- ":"; DOOMBASE=$(dirname "$0")/..
- ":"; [ "$1" = -d ] || [ "$1" = --debug ] && { shift; export DEBUG=1; }
- ":"; [ "$1" = doc ] || [ "$1" = doctor ] && { cd "$DOOMBASE"; shift; exec $EMACS --script bin/doom-doctor "$@"; exit 0; }
--":"; [ "$1" = run ] && { cd "$DOOMBASE"; shift; exec $EMACS -q --no-splash -l bin/doom "$@"; exit 0; }
-+":"; [ "$1" = run ] && { cd "$DOOMBASE"; shift; exec $EMACS -q --no-splash -l bin/.doom-wrapped "$@"; exit 0; }
- ":"; exec $EMACS --script "$0" -- "$@"
- ":"; exit 0
- 
 diff --git a/core/core.el b/core/core.el
-index 9cc1cfc25..fcbc3a3cf 100644
+index cb12f8d08..03f370691 100644
 --- a/core/core.el
 +++ b/core/core.el
-@@ -54,20 +54,20 @@ decrease this. If you experience stuttering, increase this.")
+@@ -63,22 +63,21 @@ decrease this. If you experience stuttering, increase this.")
+   "The root directory for Doom's modules. Must end with a slash.")
  
- (defvar doom-local-dir
-   (or (getenv "DOOMLOCALDIR")
--      (concat doom-emacs-dir ".local/"))
+ (defconst doom-local-dir
+-  (if-let (localdir (getenv "DOOMLOCALDIR"))
+-      (expand-file-name (file-name-as-directory localdir))
+-    (concat doom-emacs-dir ".local/"))
++  (or (getenv "DOOMLOCALDIR")
 +      "@local@/")
    "Root directory for local storage.
  
@@ -27,19 +17,19 @@ index 9cc1cfc25..fcbc3a3cf 100644
  These files should not be shared across systems. By default, it is used by
  `doom-etc-dir' and `doom-cache-dir'. Must end with a slash.")
  
--(defvar doom-etc-dir (concat doom-local-dir "etc/")
-+(defvar doom-etc-dir "~/.local/doom"
+-(defconst doom-etc-dir (concat doom-local-dir "etc/")
++(defconst doom-etc-dir "~/.local/doom"
    "Directory for non-volatile local storage.
  
  Use this for files that don't change much, like server binaries, external
  dependencies or long-term shared data. Must end with a slash.")
  
--(defvar doom-cache-dir (concat doom-local-dir "cache/")
-+(defvar doom-cache-dir "~/.cache/doom/"
+-(defconst doom-cache-dir (concat doom-local-dir "cache/")
++(defconst doom-cache-dir "~/.cache/doom/"
    "Directory for volatile local storage.
  
  Use this for files that change often, like cache files. Must end with a slash.")
-@@ -189,7 +189,7 @@ users).")
+@@ -196,7 +195,7 @@ users).")
  (setq abbrev-file-name             (concat doom-local-dir "abbrev.el")
        async-byte-compile-log-file  (concat doom-etc-dir "async-bytecomp.log")
        bookmark-default-file        (concat doom-etc-dir "bookmarks")

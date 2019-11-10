@@ -4,12 +4,12 @@
         "args": {
             "owner": "hlissner",
             "repo": "doom-emacs",
-            "rev": "019308a93c639847dccac75149d407b5a06f6c67",
-            "sha256": "0wqi7m6j1kcjxid651r0p08hswx8yxpshg61358n0jbzl3as1hrk"
+            "rev": "58e674d8fb85515e7980c87fc708dabb2b276128",
+            "sha256": "1algblcah2y5lbrn60fjslszx3jz1p9w7bh82c788ih1d8x7z253"
         },
         "meta": {
-            "updated": "2019-10-25T22:28:24+00:00",
-            "rev": "019308a93c639847dccac75149d407b5a06f6c67"
+            "updated": "2019-11-10T14:33:52+00:00",
+            "rev": "58e674d8fb85515e7980c87fc708dabb2b276128"
         }
     },
     "nix-straight.el": {

@@ -1,0 +1,20 @@
+{
+    "doom-emacs": {
+        "repo": "doom-emacs",
+        "owner": "hlissner",
+        "rev": "develop"
+    },
+    "nix-straight.el": {
+        "owner": "vlaci",
+        "repo": "nix-straight.el",
+        "rev": "v1.0"
+    },
+    "org-yt": {
+        "owner": "TobiasZawada",
+        "repo": "org-yt"
+    },
+    "emacs-overlay": {
+        "owner": "nix-community",
+        "repo": "emacs-overlay"
+    }
+}

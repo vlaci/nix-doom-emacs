@@ -1,7 +1,27 @@
 { # The files would be going to ~/.config/doom (~/.doom.d)
   doomPrivateDir
-  # Package set to install emacs and dependent packages from
+  /* Package set to install emacs and dependent packages from
+
+     Only used to get emacs package, if `bundledPackages` is set
+  */
 , emacsPackages
+  /* Use bundled revision of github.com/nix-community/emacs-overlay
+     as `emacsPackages`
+  */
+, bundledPackages ? true
+  /* Override dependency versions
+
+     Hadful for testing out updated dependencies without publishing
+     a new version of them.
+
+     Type: dependencyOverrides :: attrset -> either path derivation
+
+     Example:
+       dependencyOverrides = {
+         "emacs-overlay" = fetchFromGitHub { owner = /* ...*\/; };
+       };
+  */
+, dependencyOverrides ? { }
 , lib
 , pkgs
 , stdenv
@@ -14,6 +34,12 @@
 , writeTextDir }:
 
 let
+  lock = pkgs.callPackage
+    "${builtins.fetchTarball https://github.com/vlaci/nix-lock/archive/develop.tar.gz}/lock.nix" {
+      path = ./derivations.lock;
+      overrides = dependencyOverrides;
+    };
+
   # Packages we need to get the default doom configuration run
   overrides = self: super: {
     evil-escape = super.evil-escape.overrideAttrs (esuper: {
@@ -24,24 +50,14 @@ let
       version = "1";
       recipe = null;
       ename = pname;
-      src = fetchFromGitHub {
-        owner = "TobiasZawada";
-        repo = "org-yt";
-        rev = "40cc1ac76d741055cbefa13860d9f070a7ade001";
-        sha256 = "0jsm3azb7lwikvc53z4p91av8qvda9s15wij153spkgjp83kld3p";
-      };
+      src = lock.get pname;
     };
   };
 
   # Stage 1: prepare source for byte-compilation
   doomSrc = stdenv.mkDerivation {
     name = "doom-src";
-    src = fetchFromGitHub {
-      owner = "hlissner";
-      repo = "doom-emacs";
-      rev = "22ae9cca15f5aa9215cf0ec2c7b0b78d64deddc0";
-      sha256 = "0nya6qf2v0snd4zskxxradqdpiylpx3lxfrfi7xs04yb39ma99pn";
-    };
+    src = lock.get "doom-emacs";
     phases = ["unpackPhase" "patchPhase" "installPhase"];
     patches = [
       (substituteAll {
@@ -55,21 +71,24 @@ let
     '';
   };
 
+  # Bundled version of `emacs-overlay`
+  emacs-overlay = import (lock.get "emacs-overlay") pkgs pkgs;
+
   # Stage 2:: install dependencies and byte-compile prepared source
   doomLocal =
     let
-      straight-env = pkgs.callPackage (fetchFromGitHub {
-        owner = "vlaci";
-        repo = "nix-straight.el";
-        rev = "v1.0";
-        sha256 = "038dss49bfvpj15psh5pr9jyavivninl0rzga9cn8qyc4g2cj5i0";
-      }) {
-        emacsPackages = emacsPackages.overrideScope' overrides;
+      straight-env = pkgs.callPackage (lock.get "nix-straight.el") {
+        emacsPackages =
+          if bundledPackages then
+            let
+              epkgs = emacs-overlay.emacsPackagesFor emacsPackages.emacs;
+            in epkgs.overrideScope' overrides
+          else
+            emacsPackages.overrideScope' overrides;
         emacsLoadFiles = [ ./advice.el ];
         emacsArgs = [
+          "--"
           "install"
-          "--no-fonts"
-          "--no-env"
         ];
 
       # Need to reference a store path here, as byte-compilation will bake-in

@@ -1,0 +1,54 @@
+{
+    "doom-emacs": {
+        "fetcher": "fetchFromGitHub",
+        "args": {
+            "owner": "hlissner",
+            "repo": "doom-emacs",
+            "rev": "58e674d8fb85515e7980c87fc708dabb2b276128",
+            "sha256": "1algblcah2y5lbrn60fjslszx3jz1p9w7bh82c788ih1d8x7z253"
+        },
+        "meta": {
+            "updated": "2019-11-10T14:33:52+00:00",
+            "rev": "58e674d8fb85515e7980c87fc708dabb2b276128"
+        }
+    },
+    "nix-straight.el": {
+        "fetcher": "fetchFromGitHub",
+        "args": {
+            "owner": "vlaci",
+            "repo": "nix-straight.el",
+            "rev": "6182914aefea06ef514cd3f3f7f9f67db45940db",
+            "sha256": "038dss49bfvpj15psh5pr9jyavivninl0rzga9cn8qyc4g2cj5i0"
+        },
+        "meta": {
+            "updated": "2019-10-25T22:28:25+00:00",
+            "rev": "6182914aefea06ef514cd3f3f7f9f67db45940db"
+        }
+    },
+    "org-yt": {
+        "fetcher": "fetchFromGitHub",
+        "args": {
+            "owner": "TobiasZawada",
+            "repo": "org-yt",
+            "rev": "40cc1ac76d741055cbefa13860d9f070a7ade001",
+            "sha256": "0jsm3azb7lwikvc53z4p91av8qvda9s15wij153spkgjp83kld3p"
+        },
+        "meta": {
+            "updated": "2019-10-25T22:28:27+00:00",
+            "rev": "40cc1ac76d741055cbefa13860d9f070a7ade001"
+        }
+    },
+    "emacs-overlay": {
+        "fetcher": "fetchFromGitHub",
+        "args": {
+            "owner": "nix-community",
+            "repo": "emacs-overlay",
+            "rev": "0bd32c063118ddc95d1a73ccd01b51a2d6dda24e",
+            "sha256": "1yc1az5l6073x1amk4g3rvfd98wsq3z3jvh2l7crp8q6wq9rndpa"
+        },
+        "meta": {
+            "updated": "2019-11-10T14:33:57+00:00",
+            "rev": "0bd32c063118ddc95d1a73ccd01b51a2d6dda24e"
+        }
+    }
+}

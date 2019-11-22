@@ -2,11 +2,11 @@
   doomPrivateDir
   /* Package set to install emacs and dependent packages from
 
-     Only used to get emacs package, if `bundledPackages` is set
+     Only used to get emacs package, if `bundledPackages` is set.
   */
 , emacsPackages
   /* Use bundled revision of github.com/nix-community/emacs-overlay
-     as `emacsPackages`
+     as `emacsPackages`.
   */
 , bundledPackages ? true
   /* Override dependency versions
@@ -74,7 +74,7 @@ let
   # Bundled version of `emacs-overlay`
   emacs-overlay = import (lock.get "emacs-overlay") pkgs pkgs;
 
-  # Stage 2:: install dependencies and byte-compile prepared source
+  # Stage 2: install dependencies and byte-compile prepared source
   doomLocal =
     let
       straight-env = pkgs.callPackage (lock.get "nix-straight.el") {

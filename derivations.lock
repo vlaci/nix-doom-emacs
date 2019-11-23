@@ -4,12 +4,12 @@
         "args": {
             "owner": "hlissner",
             "repo": "doom-emacs",
-            "rev": "58e674d8fb85515e7980c87fc708dabb2b276128",
-            "sha256": "1algblcah2y5lbrn60fjslszx3jz1p9w7bh82c788ih1d8x7z253"
+            "rev": "5ece51a2a6d66f551ae8a9bf1233afe85e6a37c4",
+            "sha256": "0xf7kjipql47r4n69rvzwqkp0h42hwpza1qw5mc2mm63zkd7xm8w"
         },
         "meta": {
-            "updated": "2019-11-10T14:33:52+00:00",
-            "rev": "58e674d8fb85515e7980c87fc708dabb2b276128"
+            "updated": "2019-11-23T09:46:57+00:00",
+            "rev": "5ece51a2a6d66f551ae8a9bf1233afe85e6a37c4"
         }
     },
     "nix-straight.el": {
@@ -17,12 +17,12 @@
         "args": {
             "owner": "vlaci",
             "repo": "nix-straight.el",
-            "rev": "6182914aefea06ef514cd3f3f7f9f67db45940db",
-            "sha256": "038dss49bfvpj15psh5pr9jyavivninl0rzga9cn8qyc4g2cj5i0"
+            "rev": "ed6b14fc7a4f391229e74d5a8828a351798dda27",
+            "sha256": "0rmpvz2c2f4vdk8xdk0xqdr3pzxqfimwch4ri7cyyzqc327bd0m8"
         },
         "meta": {
-            "updated": "2019-10-25T22:28:25+00:00",
-            "rev": "6182914aefea06ef514cd3f3f7f9f67db45940db"
+            "updated": "2019-11-22T19:53:27+00:00",
+            "rev": "ed6b14fc7a4f391229e74d5a8828a351798dda27"
         }
     },
     "org-yt": {
@@ -43,12 +43,51 @@
         "args": {
             "owner": "nix-community",
             "repo": "emacs-overlay",
-            "rev": "0bd32c063118ddc95d1a73ccd01b51a2d6dda24e",
-            "sha256": "1yc1az5l6073x1amk4g3rvfd98wsq3z3jvh2l7crp8q6wq9rndpa"
+            "rev": "772fed0a34ca331df095ba1dd783fad34b88e237",
+            "sha256": "0qj7jd7sl6wqwflicw8zjjrp1vj6xwbid7h1slr24zkima0cgxhs"
         },
         "meta": {
-            "updated": "2019-11-10T14:33:57+00:00",
-            "rev": "0bd32c063118ddc95d1a73ccd01b51a2d6dda24e"
+            "updated": "2019-11-23T13:59:16+00:00",
+            "rev": "772fed0a34ca331df095ba1dd783fad34b88e237"
+        }
+    },
+    "evil-markdown": {
+        "fetcher": "fetchFromGitHub",
+        "args": {
+            "owner": "Somelauw",
+            "repo": "evil-markdown",
+            "rev": "46cd81b37991c4325fc24015a610f832b0ff995d",
+            "sha256": "0mad8sp5y9vyk28595qygspnyh8bfmb1fbxjlw70qwc1kdn822n4"
+        },
+        "meta": {
+            "updated": "2019-11-23T14:33:01+00:00",
+            "rev": "46cd81b37991c4325fc24015a610f832b0ff995d"
+        }
+    },
+    "php-extras": {
+        "fetcher": "fetchFromGitHub",
+        "args": {
+            "owner": "arnested",
+            "repo": "php-extras",
+            "rev": "81ebd7c1a8c8d02b2775d4cdbf73653feb608a7c",
+            "sha256": "181dg1z00qagwb9qd45fpcrya32mdgj8dnkpnfv52lqmi94vvzg0"
+        },
+        "meta": {
+            "updated": "2019-11-23T14:33:03+00:00",
+            "rev": "81ebd7c1a8c8d02b2775d4cdbf73653feb608a7c"
+        }
+    },
+    "so-long": {
+        "fetcher": "fetchFromGitHub",
+        "args": {
+            "owner": "hlissner",
+            "repo": "emacs-so-long",
+            "rev": "cfae473b1bf65f78ddb015159e667ec0103d881c",
+            "sha256": "0g943n5cl9lz5s7hszg6yvp10xd1xvd8mfgxyg0yckmp8fqkswin"
+        },
+        "meta": {
+            "updated": "2019-11-23T14:32:59+00:00",
+            "rev": "cfae473b1bf65f78ddb015159e667ec0103d881c"
         }
     }
 }

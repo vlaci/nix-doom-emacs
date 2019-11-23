@@ -14,3 +14,7 @@
             :override (lambda (q)
                         (message "%s \n[nix-doom-emacs] --> answering NO" q)
                         nil))
+
+;;; org is not installed from git, so no fixup is needed
+(advice-add '+org-fix-package-h
+            :override (lambda (&rest r)))

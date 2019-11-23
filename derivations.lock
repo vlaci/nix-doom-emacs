@@ -17,12 +17,12 @@
         "args": {
             "owner": "vlaci",
             "repo": "nix-straight.el",
-            "rev": "6182914aefea06ef514cd3f3f7f9f67db45940db",
-            "sha256": "038dss49bfvpj15psh5pr9jyavivninl0rzga9cn8qyc4g2cj5i0"
+            "rev": "ed6b14fc7a4f391229e74d5a8828a351798dda27",
+            "sha256": "0rmpvz2c2f4vdk8xdk0xqdr3pzxqfimwch4ri7cyyzqc327bd0m8"
         },
         "meta": {
-            "updated": "2019-10-25T22:28:25+00:00",
-            "rev": "6182914aefea06ef514cd3f3f7f9f67db45940db"
+            "updated": "2019-11-22T19:53:27+00:00",
+            "rev": "ed6b14fc7a4f391229e74d5a8828a351798dda27"
         }
     },
     "org-yt": {

@@ -7,7 +7,7 @@
     "nix-straight.el": {
         "owner": "vlaci",
         "repo": "nix-straight.el",
-        "rev": "v1.0"
+        "rev": "v1.1.0"
     },
     "org-yt": {
         "owner": "TobiasZawada",

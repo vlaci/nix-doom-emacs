@@ -1,5 +1,14 @@
 { # The files would be going to ~/.config/doom (~/.doom.d)
   doomPrivateDir
+  /* Extra packages to install
+
+     Useful for non-emacs packages containing emacs bindings (e.g.
+     mu4e).
+
+     Example:
+       extraPackages = epkgs: [ pkgs.mu ];
+  */
+, extraPackages ? epkgs: []
   /* Package set to install emacs and dependent packages from
 
      Only used to get emacs package, if `bundledPackages` is set.
@@ -85,6 +94,7 @@ let
             in epkgs.overrideScope' overrides
           else
             emacsPackages.overrideScope' overrides;
+        emacs = emacsPackages.emacsWithPackages extraPackages;
         emacsLoadFiles = [ ./advice.el ];
         emacsArgs = [
           "--"

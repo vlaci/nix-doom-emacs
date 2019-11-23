@@ -142,9 +142,8 @@ let
       packages = straight-env.packageList (super: {
         phases = [ "installPhase" ];
         preInstall = ''
-          export DOOMDIR=$(mktemp -d)
-          export DOOMLOCALDIR=$DOOMDIR/local/
-          cp ${doomPrivateDir}/* $DOOMDIR
+          export DOOMDIR=${doomPrivateDir}
+          export DOOMLOCALDIR=$(mktemp -d)/local/
         '';
       });
 
@@ -160,10 +159,8 @@ let
       phases = [ "installPhase" ];
       buildInputs = super.buildInputs ++ [ git ];
       preInstall = ''
-          export DOOMDIR=$(mktemp -d)
+          export DOOMDIR=${doomPrivateDir}
           export DOOMLOCALDIR=$out/
-          mkdir -p $DOOMDIR
-          cp ${doomPrivateDir}/* $DOOMDIR
       '';
     });
 
@@ -196,20 +193,26 @@ let
       (load "${doom-emacs}/init.el")
     '';
 
-    load-extra-config = writeTextDir "share/emacs/site-lisp/nix-integration.el" ''
-      ;;; -*- lexical-binding: t; -*-
-
-      ${extraConfig}
+    # `extraConfig` is merged into private configuration
+    doomDir = pkgs.runCommand "doom-private" {
+      inherit extraConfig;
+      passAsFile = [ "extraConfig" ];
+    } ''
+        mkdir -p $out
+        cp ${doomPrivateDir}/* $out
+        chmod u+w $out/config.el
+        cat $extraConfigPath >> $out/config.el
     '';
   in (emacsPackages.emacsWithPackages (epkgs: [
-    load-extra-config
     load-config-from-site
   ])).overrideAttrs (super: {
     outputs = [ "out" "emacsd" ];
     buildInputs = [ doom-emacs ];
     installPhase = super.installPhase + ''
-      echo ln -snf ${doom-emacs} $emacsd
       ln -snf ${doom-emacs} $emacsd
+      for prog in $out/bin/*; do
+        wrapProgram $prog  --set DOOMDIR ${doomDir}
+      done
     '';
   });
 

@@ -19,14 +19,13 @@ Using [home-manager](https://github.com/rycee/home-manager):
 { pkgs, ... }:
 
 let
-  doomPrivateDir = ./doom.d;
-
   doom-emacs = pkgs.callPackage (builtins.fetchTarball {
     url = https://github.com/vlaci/nix-doom-emacs/archive/master.tar.gz;
-  }) { inherit doomPrivateDir; };
+  }) {
+    doomPrivateDir = ./doom.d;
+  };
 in {
   home.packages = [ doom-emacs ];
-  home.file.".doom.d".source = doomPrivateDir;
   home.file.".emacs.d".source = doom-emacs.emacsd;
 }
 ```

@@ -50,5 +50,44 @@
             "updated": "2019-11-22T20:22:22+00:00",
             "rev": "10e16733ba3444967c8d24b23b99f7b57239f3e4"
         }
+    },
+    "evil-markdown": {
+        "fetcher": "fetchFromGitHub",
+        "args": {
+            "owner": "Somelauw",
+            "repo": "evil-markdown",
+            "rev": "46cd81b37991c4325fc24015a610f832b0ff995d",
+            "sha256": "0mad8sp5y9vyk28595qygspnyh8bfmb1fbxjlw70qwc1kdn822n4"
+        },
+        "meta": {
+            "updated": "2019-11-23T14:33:01+00:00",
+            "rev": "46cd81b37991c4325fc24015a610f832b0ff995d"
+        }
+    },
+    "php-extras": {
+        "fetcher": "fetchFromGitHub",
+        "args": {
+            "owner": "arnested",
+            "repo": "php-extras",
+            "rev": "81ebd7c1a8c8d02b2775d4cdbf73653feb608a7c",
+            "sha256": "181dg1z00qagwb9qd45fpcrya32mdgj8dnkpnfv52lqmi94vvzg0"
+        },
+        "meta": {
+            "updated": "2019-11-23T14:33:03+00:00",
+            "rev": "81ebd7c1a8c8d02b2775d4cdbf73653feb608a7c"
+        }
+    },
+    "so-long": {
+        "fetcher": "fetchFromGitHub",
+        "args": {
+            "owner": "hlissner",
+            "repo": "emacs-so-long",
+            "rev": "cfae473b1bf65f78ddb015159e667ec0103d881c",
+            "sha256": "0g943n5cl9lz5s7hszg6yvp10xd1xvd8mfgxyg0yckmp8fqkswin"
+        },
+        "meta": {
+            "updated": "2019-11-23T14:32:59+00:00",
+            "rev": "cfae473b1bf65f78ddb015159e667ec0103d881c"
+        }
     }
 }

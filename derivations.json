@@ -9,9 +9,21 @@
         "repo": "nix-straight.el",
         "rev": "v1.1.0"
     },
+    "evil-markdown": {
+        "owner": "Somelauw",
+        "repo": "evil-markdown"
+    },
     "org-yt": {
         "owner": "TobiasZawada",
         "repo": "org-yt"
+    },
+    "php-extras": {
+        "owner": "arnested",
+        "repo": "php-extras"
+    },
+    "so-long": {
+        "owner": "hlissner",
+        "repo": "emacs-so-long"
     },
     "emacs-overlay": {
         "owner": "nix-community",

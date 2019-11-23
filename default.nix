@@ -64,11 +64,34 @@ let
     evil-escape = super.evil-escape.overrideAttrs (esuper: {
       patches = [ ./evil-escape.patch ];
     });
+    evil-markdown = self.trivialBuild rec {
+      pname = "evil-markdown";
+      version = "1";
+      recipe = null;
+      ename = pname;
+      src = lock.get pname;
+      buildPhase = ":";
+    };
     org-yt = self.trivialBuild rec {
       pname = "org-yt";
       version = "1";
       recipe = null;
       ename = pname;
+      src = lock.get pname;
+    };
+    php-extras = self.trivialBuild rec {
+      pname = "php-extras";
+      version = "1";
+      recipe = null;
+      ename = pname;
+      src = lock.get pname;
+      buildPhase = ":";
+    };
+    so-long = self.trivialBuild rec {
+      pname = "so-long";
+      version = "1";
+      recipe = null;
+      ename = "emacs-so-long";
       src = lock.get pname;
     };
   };

@@ -38,11 +38,3 @@ index cb12f8d08..03f370691 100644
        custom-theme-directory       (concat doom-private-dir "themes/")
        desktop-dirname              (concat doom-etc-dir "desktop")
        desktop-base-file-name       "autosave"
-@@ -489,6 +488,7 @@ to least)."
-                    (daemonp))
-                (file-exists-p doom-env-file))
-       (doom-load-envvars-file doom-env-file))
-+    (load "nix-integration.el" t)
- 
-     (require 'core-modules)
-     (let (;; `doom-autoload-file' tells Emacs where to load all its functions

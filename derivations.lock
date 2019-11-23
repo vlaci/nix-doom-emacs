@@ -4,12 +4,12 @@
         "args": {
             "owner": "hlissner",
             "repo": "doom-emacs",
-            "rev": "88eb9d1d61b816745fa1d8fa09750e161cdf3dba",
-            "sha256": "0l49fa9qrk0y4rv6lz6ikv1fnfhw8bpkyignjddrcww5n22yx400"
+            "rev": "5ece51a2a6d66f551ae8a9bf1233afe85e6a37c4",
+            "sha256": "0xf7kjipql47r4n69rvzwqkp0h42hwpza1qw5mc2mm63zkd7xm8w"
         },
         "meta": {
-            "updated": "2019-11-22T22:06:02+00:00",
-            "rev": "88eb9d1d61b816745fa1d8fa09750e161cdf3dba"
+            "updated": "2019-11-23T09:46:57+00:00",
+            "rev": "5ece51a2a6d66f551ae8a9bf1233afe85e6a37c4"
         }
     },
     "nix-straight.el": {
@@ -43,12 +43,12 @@
         "args": {
             "owner": "nix-community",
             "repo": "emacs-overlay",
-            "rev": "10e16733ba3444967c8d24b23b99f7b57239f3e4",
-            "sha256": "130xd7l3scki176wp260ha4qhcl0h0dygrlpl3j8rfqk7mfjq5ja"
+            "rev": "772fed0a34ca331df095ba1dd783fad34b88e237",
+            "sha256": "0qj7jd7sl6wqwflicw8zjjrp1vj6xwbid7h1slr24zkima0cgxhs"
         },
         "meta": {
-            "updated": "2019-11-22T20:22:22+00:00",
-            "rev": "10e16733ba3444967c8d24b23b99f7b57239f3e4"
+            "updated": "2019-11-23T13:59:16+00:00",
+            "rev": "772fed0a34ca331df095ba1dd783fad34b88e237"
         }
     },
     "evil-markdown": {

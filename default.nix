@@ -9,6 +9,16 @@
        extraPackages = epkgs: [ pkgs.mu ];
   */
 , extraPackages ? epkgs: []
+  /* Extra configuration to source during initialization
+
+     Use this to refer other nix derivations.
+
+     Example:
+       extraConfig = ''
+         (setq mu4e-mu-binary = "${pkgs.mu}/bin/mu")
+       '';
+  */
+, extraConfig ? ""
   /* Package set to install emacs and dependent packages from
 
      Only used to get emacs package, if `bundledPackages` is set.
@@ -70,7 +80,7 @@ let
     phases = ["unpackPhase" "patchPhase" "installPhase"];
     patches = [
       (substituteAll {
-        src = ./fix-paths-pre.patch;
+        src = ./fix-paths.patch;
         private = builtins.toString doomPrivateDir;
       })
     ];
@@ -141,7 +151,7 @@ let
     src = doomSrc;
     patches = [
       (substituteAll {
-        src = ./fix-paths.patch;
+        src = ./nix-integration.patch;
         local = doomLocal;
       })
     ];
@@ -154,14 +164,23 @@ let
 
   # Stage 4: catch-all wrapper capable to run doom-emacs even
   # without installing ~/.emacs.d
-  emacs = (emacsPackages.emacsWithPackages (epkgs: [
-    (writeTextDir "share/emacs/site-lisp/default.el" ''
-        (message "doom-emacs is not placed in `doom-private-dir',
-        loading from `site-lisp'")
-        (when (> emacs-major-version 26)
-              (load "${doom-emacs}/early-init.el"))
-        (load "${doom-emacs}/init.el")
-      '')
+  emacs = let
+    load-config-from-site = writeTextDir "share/emacs/site-lisp/default.el" ''
+      (message "doom-emacs is not placed in `doom-private-dir',
+      loading from `site-lisp'")
+      (when (> emacs-major-version 26)
+            (load "${doom-emacs}/early-init.el"))
+      (load "${doom-emacs}/init.el")
+    '';
+
+    load-extra-config = writeTextDir "share/emacs/site-lisp/nix-integration.el" ''
+      ;;; -*- lexical-binding: t; -*-
+
+      ${extraConfig}
+    '';
+  in (emacsPackages.emacsWithPackages (epkgs: [
+    load-extra-config
+    load-config-from-site
   ])).overrideAttrs (super: {
     outputs = [ "out" "emacsd" ];
     buildInputs = [ doom-emacs ];

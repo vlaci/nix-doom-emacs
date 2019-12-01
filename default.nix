@@ -72,6 +72,14 @@ let
       src = lock.get pname;
       buildPhase = ":";
     };
+    evil-quick-diff = self.trivialBuild rec {
+      pname = "evil-quick-diff";
+      version = "1";
+      recipe = null;
+      ename = pname;
+      src = lock.get pname;
+      buildPhase = ":";
+    };
     org-yt = self.trivialBuild rec {
       pname = "org-yt";
       version = "1";

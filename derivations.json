@@ -13,6 +13,10 @@
         "owner": "Somelauw",
         "repo": "evil-markdown"
     },
+    "evil-quick-diff": {
+        "owner": "rgrinberg",
+        "repo": "evil-quick-diff"
+    },
     "org-yt": {
         "owner": "TobiasZawada",
         "repo": "org-yt"

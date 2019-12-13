@@ -211,13 +211,12 @@ let
             (load "${doom-emacs}/early-init.el"))
       (load "${doom-emacs}/init.el")
     '';
-
   in (emacsPackages.emacsWithPackages (epkgs: [
     load-config-from-site
   ]));
 in
 pkgs.runCommand "doom-emacs" {
-  inherit doom-emacs emacs;
+  inherit emacs;
   buildInputs = [ emacs ];
   nativeBuildInputs = [ makeWrapper ];
 } ''
@@ -225,4 +224,10 @@ pkgs.runCommand "doom-emacs" {
     for prog in $emacs/bin/*; do
       makeWrapper $prog $out/bin/$(basename $prog) --set DOOMDIR ${doomDir}
     done
+    # emacsWithPackages assumes share/emacs/site-lisp/subdirs.el
+    # exists, but doesn't pass it along.  When home-manager calls
+    # emacsWithPackages again on this derivation, it fails due to
+    # a dangling link to subdirs.el.
+    # https://github.com/NixOS/nixpkgs/issues/66706
+    ln -s ${emacs.emacs}/share $out
   ''

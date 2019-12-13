@@ -190,7 +190,18 @@ let
     '';
   };
 
-  # Stage 4: catch-all wrapper capable to run doom-emacs even
+  # Stage 4: `extraConfig` is merged into private configuration
+  doomDir = pkgs.runCommand "doom-private" {
+    inherit extraConfig;
+    passAsFile = [ "extraConfig" ];
+  } ''
+      mkdir -p $out
+      cp ${doomPrivateDir}/* $out
+      chmod u+w $out/config.el
+      cat $extraConfigPath >> $out/config.el
+  '';
+
+  # Stage 5: catch-all wrapper capable to run doom-emacs even
   # without installing ~/.emacs.d
   emacs = let
     load-config-from-site = writeTextDir "share/emacs/site-lisp/default.el" ''
@@ -201,27 +212,17 @@ let
       (load "${doom-emacs}/init.el")
     '';
 
-    # `extraConfig` is merged into private configuration
-    doomDir = pkgs.runCommand "doom-private" {
-      inherit extraConfig;
-      passAsFile = [ "extraConfig" ];
-    } ''
-        mkdir -p $out
-        cp ${doomPrivateDir}/* $out
-        chmod u+w $out/config.el
-        cat $extraConfigPath >> $out/config.el
-    '';
   in (emacsPackages.emacsWithPackages (epkgs: [
     load-config-from-site
-  ])).overrideAttrs (super: {
-    outputs = [ "out" "emacsd" ];
-    buildInputs = [ doom-emacs ];
-    installPhase = super.installPhase + ''
-      ln -snf ${doom-emacs} $emacsd
-      for prog in $out/bin/*; do
-        wrapProgram $prog  --set DOOMDIR ${doomDir}
-      done
-    '';
-  });
-
-in emacs
+  ]));
+in
+pkgs.runCommand "doom-emacs" {
+  inherit doom-emacs emacs;
+  buildInputs = [ emacs ];
+  nativeBuildInputs = [ makeWrapper ];
+} ''
+    mkdir -p $out/bin
+    for prog in $emacs/bin/*; do
+      makeWrapper $prog $out/bin/$(basename $prog) --set DOOMDIR ${doomDir}
+    done
+  ''

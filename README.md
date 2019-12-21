@@ -27,7 +27,9 @@ let
   };
 in {
   home.packages = [ doom-emacs ];
-  home.file.".emacs.d".source = doom-emacs.emacsd;
+  home.file.".emacs.d/init.el".text = ''
+      (load "default.el")
+  '';
 }
 ```
 

@@ -4,12 +4,12 @@
         "args": {
             "owner": "hlissner",
             "repo": "doom-emacs",
-            "rev": "732d35071c6d10b780b9be9870ba1553a712874a",
-            "sha256": "08dflhc4vs03m0spsfr36fnqrf7bqc2xz0qw542vwsra9r276kyy"
+            "rev": "18edebe9c659446ab353e144b3bf81d65387f2f9",
+            "sha256": "1lxyhiv4966nz8a652jvg2c3g17prkgkl65cfavyf1q8xpla2hrw"
         },
         "meta": {
-            "updated": "2019-12-01T14:40:37+00:00",
-            "rev": "732d35071c6d10b780b9be9870ba1553a712874a"
+            "updated": "2019-12-21T13:21:44+00:00",
+            "rev": "18edebe9c659446ab353e144b3bf81d65387f2f9"
         }
     },
     "nix-straight.el": {
@@ -43,12 +43,12 @@
         "args": {
             "owner": "nix-community",
             "repo": "emacs-overlay",
-            "rev": "059e994b64fea0344d63fde18be75f3800ec56d6",
-            "sha256": "1w265iwzajvdfidxi5xnbnprcifipgwfbg9h7z7cpfa05an86cfj"
+            "rev": "428a677f8fadfee76a1f1679c6adbe5c22242839",
+            "sha256": "175f2yc23i486ikvh4vzm1k19h831vsk00r7i7i4wr8n2pv9hp3n"
         },
         "meta": {
-            "updated": "2019-12-01T14:40:47+00:00",
-            "rev": "059e994b64fea0344d63fde18be75f3800ec56d6"
+            "updated": "2019-12-21T12:43:15+00:00",
+            "rev": "428a677f8fadfee76a1f1679c6adbe5c22242839"
         }
     },
     "evil-markdown": {
@@ -82,12 +82,12 @@
         "args": {
             "owner": "hlissner",
             "repo": "emacs-so-long",
-            "rev": "cfae473b1bf65f78ddb015159e667ec0103d881c",
-            "sha256": "0g943n5cl9lz5s7hszg6yvp10xd1xvd8mfgxyg0yckmp8fqkswin"
+            "rev": "ed666b0716f60e8988c455804de24b55919e71ca",
+            "sha256": "0bc6nrdrvj422g15zqn00vs7ga9bq5c3hdg7ml1kls8rxp6bk1n4"
         },
         "meta": {
-            "updated": "2019-11-23T14:32:59+00:00",
-            "rev": "cfae473b1bf65f78ddb015159e667ec0103d881c"
+            "updated": "2019-12-21T13:21:48+00:00",
+            "rev": "ed666b0716f60e8988c455804de24b55919e71ca"
         }
     },
     "evil-quick-diff": {

@@ -6,9 +6,8 @@
                                   :override (lambda (&optional file force-p)
                                               (message "[nix-doom-emacs] Skipping generating autoloads...")))
                       (advice-add 'doom--format-print
-                                  :around (lambda (orig-print &rest r)
-                                            (let ((noninteractive nil))
-                                              (apply orig-print r))))))
+                                  :override (lambda (output)
+                                            (message output)))))
 
 (advice-add 'y-or-n-p
             :override (lambda (q)

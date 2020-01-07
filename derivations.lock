@@ -102,5 +102,18 @@
             "updated": "2019-12-01T14:49:48+00:00",
             "rev": "69c883720b30a892c63bc89f49d4f0e8b8028908"
         }
+    },
+    "evil-org-mode": {
+        "fetcher": "fetchFromGitHub",
+        "args": {
+            "owner": "hlissner",
+            "repo": "evil-org-mode",
+            "rev": "4d44e9bbdc3ae35d0050ca298886710f6531f434",
+            "sha256": "0kp19q58rqi2x31g5fqqy5rzw7ymxsa9iaxj3f9rya9zyyma6g59"
+        },
+        "meta": {
+            "updated": "2020-01-07T11:56:38+00:00",
+            "rev": "4d44e9bbdc3ae35d0050ca298886710f6531f434"
+        }
     }
 }

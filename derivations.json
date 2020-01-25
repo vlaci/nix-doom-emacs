@@ -13,6 +13,10 @@
         "owner": "Somelauw",
         "repo": "evil-markdown"
     },
+    "evil-org-mode": {
+        "owner": "hlissner",
+        "repo": "evil-org-mode"
+    },
     "evil-quick-diff": {
         "owner": "rgrinberg",
         "repo": "evil-quick-diff"

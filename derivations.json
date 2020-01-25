@@ -21,6 +21,10 @@
         "owner": "rgrinberg",
         "repo": "evil-quick-diff"
     },
+    "org-mode": {
+        "owner": "emacs-straight",
+        "repo": "org-mode"
+    },
     "org-yt": {
         "owner": "TobiasZawada",
         "repo": "org-yt"

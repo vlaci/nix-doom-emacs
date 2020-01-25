@@ -115,5 +115,18 @@
             "updated": "2020-01-07T11:56:38+00:00",
             "rev": "4d44e9bbdc3ae35d0050ca298886710f6531f434"
         }
+    },
+    "org-mode": {
+        "fetcher": "fetchFromGitHub",
+        "args": {
+            "owner": "emacs-straight",
+            "repo": "org-mode",
+            "rev": "cd1014a75a1ad63fdc44d6cd2722d529f1f5b7f7",
+            "sha256": "090fpka0mc8qvj2l0s8vh1cm2qfmlx9pfcd2ypnx8p88vgs2chg8"
+        },
+        "meta": {
+            "updated": "2020-01-25T18:50:42+00:00",
+            "rev": "cd1014a75a1ad63fdc44d6cd2722d529f1f5b7f7"
+        }
     }
 }

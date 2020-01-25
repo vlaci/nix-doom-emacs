@@ -88,6 +88,25 @@ let
       src = lock.get pname;
       buildPhase = ":";
     };
+    org-mode = self.trivialBuild rec {
+      pname = "org-mode";
+      version = "9.4";
+      recipe = null;
+      ename = pname;
+      src = lock.get pname;
+      installPhase = ''
+        LISPDIR=$out/share/emacs/site-lisp
+        install -d $LISPDIR
+
+        cp -r * $LISPDIR
+
+        cat > $LISPDIR/lisp/org-version.el <<EOF
+        (fset 'org-release (lambda () "${version}"))
+        (fset 'org-git-version #'ignore)
+        (provide 'org-version)
+        EOF
+      '';
+    };
     org-yt = self.trivialBuild rec {
       pname = "org-yt";
       version = "1";

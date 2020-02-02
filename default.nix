@@ -64,51 +64,46 @@ let
     evil-escape = super.evil-escape.overrideAttrs (esuper: {
       patches = [ ./evil-escape.patch ];
     });
-    evil-markdown = self.trivialBuild rec {
+    straightBuild = { pname, ... }@args: self.trivialBuild ({
+      ename = pname;
+      version = "1";
+      src = lock.get pname;
+      buildPhase = ":";
+    } // args);
+    evil-markdown = self.straightBuild {
       pname = "evil-markdown";
-      version = "1";
-      recipe = null;
-      ename = pname;
-      src = lock.get pname;
-      buildPhase = ":";
     };
-    evil-org = self.trivialBuild rec {
+    evil-org = self.straightBuild {
       pname = "evil-org-mode";
-      version = "1";
-      recipe = null;
-      ename = pname;
-      src = lock.get pname;
-      buildPhase = ":";
     };
-    evil-quick-diff = self.trivialBuild rec {
+    evil-quick-diff = self.straightBuild {
       pname = "evil-quick-diff";
-      version = "1";
-      recipe = null;
-      ename = pname;
-      src = lock.get pname;
-      buildPhase = ":";
     };
-    org-yt = self.trivialBuild rec {
+    org-mode = self.straightBuild rec {
+      pname = "org-mode";
+      version = "9.4";
+      installPhase = ''
+        LISPDIR=$out/share/emacs/site-lisp
+        install -d $LISPDIR
+
+        cp -r * $LISPDIR
+
+        cat > $LISPDIR/lisp/org-version.el <<EOF
+        (fset 'org-release (lambda () "${version}"))
+        (fset 'org-git-version #'ignore)
+        (provide 'org-version)
+        EOF
+      '';
+    };
+    org-yt = self.straightBuild {
       pname = "org-yt";
-      version = "1";
-      recipe = null;
-      ename = pname;
-      src = lock.get pname;
     };
-    php-extras = self.trivialBuild rec {
+    php-extras = self.straightBuild {
       pname = "php-extras";
-      version = "1";
-      recipe = null;
-      ename = pname;
-      src = lock.get pname;
-      buildPhase = ":";
     };
-    so-long = self.trivialBuild rec {
+    so-long = self.straightBuild {
       pname = "so-long";
-      version = "1";
-      recipe = null;
       ename = "emacs-so-long";
-      src = lock.get pname;
     };
   };
 

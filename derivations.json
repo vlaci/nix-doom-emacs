@@ -7,7 +7,7 @@
     "nix-straight.el": {
         "owner": "vlaci",
         "repo": "nix-straight.el",
-        "rev": "v1.1.0"
+        "rev": "v1.2.0"
     },
     "evil-markdown": {
         "owner": "Somelauw",
@@ -20,6 +20,10 @@
     "evil-quick-diff": {
         "owner": "rgrinberg",
         "repo": "evil-quick-diff"
+    },
+    "org-mode": {
+        "owner": "emacs-straight",
+        "repo": "org-mode"
     },
     "org-yt": {
         "owner": "TobiasZawada",

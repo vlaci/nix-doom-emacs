@@ -4,12 +4,12 @@
         "args": {
             "owner": "hlissner",
             "repo": "doom-emacs",
-            "rev": "b5a279311cfec3d1e66678bf3bff47f4118a62a9",
-            "sha256": "1a1gl700f7f0jcvfljp9xw8lhxdlkv36d2mkm976n99jp6rdyhal"
+            "rev": "d39961b30df1bdccdc40281c3879abecbe1ffdfb",
+            "sha256": "18mmdcc24m7n1px5fgkfsb9ys305q3v9hni5djnfzl1y0q3mapg0"
         },
         "meta": {
-            "updated": "2020-01-07T09:34:04+00:00",
-            "rev": "b5a279311cfec3d1e66678bf3bff47f4118a62a9"
+            "updated": "2020-01-25T14:25:34+00:00",
+            "rev": "d39961b30df1bdccdc40281c3879abecbe1ffdfb"
         }
     },
     "nix-straight.el": {
@@ -17,12 +17,12 @@
         "args": {
             "owner": "vlaci",
             "repo": "nix-straight.el",
-            "rev": "ed6b14fc7a4f391229e74d5a8828a351798dda27",
-            "sha256": "0rmpvz2c2f4vdk8xdk0xqdr3pzxqfimwch4ri7cyyzqc327bd0m8"
+            "rev": "446f3d70f1816305130f307c0cf2bc8db77ed698",
+            "sha256": "1p4yp46kwhii8w9yf882fca9r3addn91wg6f4mv62wnkfm0i6q0f"
         },
         "meta": {
-            "updated": "2019-11-22T19:53:27+00:00",
-            "rev": "ed6b14fc7a4f391229e74d5a8828a351798dda27"
+            "updated": "2020-01-25T18:43:31+00:00",
+            "rev": "446f3d70f1816305130f307c0cf2bc8db77ed698"
         }
     },
     "org-yt": {
@@ -43,12 +43,12 @@
         "args": {
             "owner": "nix-community",
             "repo": "emacs-overlay",
-            "rev": "78dee3837b57fb29c8794d65af165582f51b2db2",
-            "sha256": "15fv8daidd6pzvvxplnl8fkw67yb8zihknjnnq0lz88x9hp3fviv"
+            "rev": "4b2bc0ed3c0473a6ea26e38952abdd8acf461063",
+            "sha256": "0j9sas3g4fhz8ar3f0zk9w273qlp9ij5s65gn8vn4lgnxgwap1ri"
         },
         "meta": {
-            "updated": "2020-01-07T09:34:09+00:00",
-            "rev": "78dee3837b57fb29c8794d65af165582f51b2db2"
+            "updated": "2020-01-25T18:43:36+00:00",
+            "rev": "4b2bc0ed3c0473a6ea26e38952abdd8acf461063"
         }
     },
     "evil-markdown": {
@@ -114,6 +114,19 @@
         "meta": {
             "updated": "2020-01-07T11:56:38+00:00",
             "rev": "4d44e9bbdc3ae35d0050ca298886710f6531f434"
+        }
+    },
+    "org-mode": {
+        "fetcher": "fetchFromGitHub",
+        "args": {
+            "owner": "emacs-straight",
+            "repo": "org-mode",
+            "rev": "cd1014a75a1ad63fdc44d6cd2722d529f1f5b7f7",
+            "sha256": "090fpka0mc8qvj2l0s8vh1cm2qfmlx9pfcd2ypnx8p88vgs2chg8"
+        },
+        "meta": {
+            "updated": "2020-01-25T18:50:42+00:00",
+            "rev": "cd1014a75a1ad63fdc44d6cd2722d529f1f5b7f7"
         }
     }
 }

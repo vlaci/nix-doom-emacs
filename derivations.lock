@@ -4,12 +4,12 @@
         "args": {
             "owner": "hlissner",
             "repo": "doom-emacs",
-            "rev": "a12a54b28f1fca705f51fdb7a80f3863369fea08",
-            "sha256": "1zyfjak7x2aprnvim08811lk65r41hzx1h6rrkna0q9s093vf44l"
+            "rev": "456b501aad3d3baecc61576ac94223e0a7c769db",
+            "sha256": "18pm7ywvxx2w3ghqhcr0mlfl8j05pl0rhawaazqfi38dv8x2yjbl"
         },
         "meta": {
-            "updated": "2020-02-02T09:27:53+00:00",
-            "rev": "a12a54b28f1fca705f51fdb7a80f3863369fea08"
+            "updated": "2020-02-08T10:06:12+00:00",
+            "rev": "456b501aad3d3baecc61576ac94223e0a7c769db"
         }
     },
     "nix-straight.el": {
@@ -43,12 +43,12 @@
         "args": {
             "owner": "nix-community",
             "repo": "emacs-overlay",
-            "rev": "a98432b4e01305253f7de93b6baa48758344c975",
-            "sha256": "1188mzg24dss9fqs7c9nz6c4ky2kcs86rbjdwqwry9gn03d602ky"
+            "rev": "94ed874abf66c533df902c342cc93f12d208fc79",
+            "sha256": "1cqqzqgmnh7dj044dbvyw7hp0p1r8rbc62vg67r3vkykzzrzihl2"
         },
         "meta": {
-            "updated": "2020-02-02T09:28:00+00:00",
-            "rev": "a98432b4e01305253f7de93b6baa48758344c975"
+            "updated": "2020-02-08T10:06:19+00:00",
+            "rev": "94ed874abf66c533df902c342cc93f12d208fc79"
         }
     },
     "evil-markdown": {
@@ -121,12 +121,12 @@
         "args": {
             "owner": "emacs-straight",
             "repo": "org-mode",
-            "rev": "eaf8b78a74c2df6544e4bc889ee1f8495d83bd56",
-            "sha256": "1rpxmlbhc4vmaipdg7cbhrjzn5l07sdbzisjcbw3m2addk34hsps"
+            "rev": "5ab6f6b77e1548b569439850fed6882da7fe400f",
+            "sha256": "09ankcy1fzabmdwn9qy1zh3qccga2233v5g3fywvgc8nmdfrjaqb"
         },
         "meta": {
-            "updated": "2020-02-02T09:27:57+00:00",
-            "rev": "eaf8b78a74c2df6544e4bc889ee1f8495d83bd56"
+            "updated": "2020-02-08T10:06:16+00:00",
+            "rev": "5ab6f6b77e1548b569439850fed6882da7fe400f"
         }
     }
 }

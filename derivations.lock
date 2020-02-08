@@ -4,12 +4,12 @@
         "args": {
             "owner": "hlissner",
             "repo": "doom-emacs",
-            "rev": "d39961b30df1bdccdc40281c3879abecbe1ffdfb",
-            "sha256": "18mmdcc24m7n1px5fgkfsb9ys305q3v9hni5djnfzl1y0q3mapg0"
+            "rev": "a12a54b28f1fca705f51fdb7a80f3863369fea08",
+            "sha256": "1zyfjak7x2aprnvim08811lk65r41hzx1h6rrkna0q9s093vf44l"
         },
         "meta": {
-            "updated": "2020-01-25T14:25:34+00:00",
-            "rev": "d39961b30df1bdccdc40281c3879abecbe1ffdfb"
+            "updated": "2020-02-02T09:27:53+00:00",
+            "rev": "a12a54b28f1fca705f51fdb7a80f3863369fea08"
         }
     },
     "nix-straight.el": {
@@ -43,12 +43,12 @@
         "args": {
             "owner": "nix-community",
             "repo": "emacs-overlay",
-            "rev": "4b2bc0ed3c0473a6ea26e38952abdd8acf461063",
-            "sha256": "0j9sas3g4fhz8ar3f0zk9w273qlp9ij5s65gn8vn4lgnxgwap1ri"
+            "rev": "a98432b4e01305253f7de93b6baa48758344c975",
+            "sha256": "1188mzg24dss9fqs7c9nz6c4ky2kcs86rbjdwqwry9gn03d602ky"
         },
         "meta": {
-            "updated": "2020-01-25T18:43:36+00:00",
-            "rev": "4b2bc0ed3c0473a6ea26e38952abdd8acf461063"
+            "updated": "2020-02-02T09:28:00+00:00",
+            "rev": "a98432b4e01305253f7de93b6baa48758344c975"
         }
     },
     "evil-markdown": {
@@ -121,12 +121,12 @@
         "args": {
             "owner": "emacs-straight",
             "repo": "org-mode",
-            "rev": "cd1014a75a1ad63fdc44d6cd2722d529f1f5b7f7",
-            "sha256": "090fpka0mc8qvj2l0s8vh1cm2qfmlx9pfcd2ypnx8p88vgs2chg8"
+            "rev": "eaf8b78a74c2df6544e4bc889ee1f8495d83bd56",
+            "sha256": "1rpxmlbhc4vmaipdg7cbhrjzn5l07sdbzisjcbw3m2addk34hsps"
         },
         "meta": {
-            "updated": "2020-01-25T18:50:42+00:00",
-            "rev": "cd1014a75a1ad63fdc44d6cd2722d529f1f5b7f7"
+            "updated": "2020-02-02T09:27:57+00:00",
+            "rev": "eaf8b78a74c2df6544e4bc889ee1f8495d83bd56"
         }
     }
 }

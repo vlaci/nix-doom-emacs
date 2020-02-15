@@ -128,5 +128,31 @@
             "updated": "2020-02-15T09:39:37+00:00",
             "rev": "e361c640435af947fab201c1fe60f25843edb5e9"
         }
+    },
+    "doom-snippets": {
+        "fetcher": "fetchFromGitHub",
+        "args": {
+            "owner": "hlissner",
+            "repo": "doom-snippets",
+            "rev": "4a0e675e1a4713dc8b3c020b30cad18ef4d7401d",
+            "sha256": "0b3vdwm9brnjgivxd3icz5znjhjhzqkd38nn9qamk4n09d7h2nd7"
+        },
+        "meta": {
+            "updated": "2020-02-15T09:48:50+00:00",
+            "rev": "4a0e675e1a4713dc8b3c020b30cad18ef4d7401d"
+        }
+    },
+    "rotate-text": {
+        "fetcher": "fetchFromGitHub",
+        "args": {
+            "owner": "debug-ito",
+            "repo": "rotate-text.el",
+            "rev": "48f193697db996855aee1ad2bc99b38c6646fe76",
+            "sha256": "02fkv45nbbqrv12czlinpr8qpsd7yjdhr628hl58n42w560qxrs8"
+        },
+        "meta": {
+            "updated": "2020-02-15T09:48:53+00:00",
+            "rev": "48f193697db996855aee1ad2bc99b38c6646fe76"
+        }
     }
 }

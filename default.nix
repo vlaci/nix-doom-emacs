@@ -70,6 +70,9 @@ let
       src = lock.get pname;
       buildPhase = ":";
     } // args);
+    doom-snippets = self.straightBuild {
+      pname = "doom-snippets";
+    };
     evil-markdown = self.straightBuild {
       pname = "evil-markdown";
     };
@@ -100,6 +103,10 @@ let
     };
     php-extras = self.straightBuild {
       pname = "php-extras";
+    };
+    rotate-text = self.straightBuild {
+      pname = "rotate-text";
+      ename = "rotate-text.el";
     };
     so-long = self.straightBuild {
       pname = "so-long";

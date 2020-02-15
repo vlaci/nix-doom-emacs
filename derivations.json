@@ -9,6 +9,10 @@
         "repo": "nix-straight.el",
         "rev": "v1.2.0"
     },
+    "doom-snippets": {
+        "owner": "hlissner",
+        "repo": "doom-snippets"
+    },
     "evil-markdown": {
         "owner": "Somelauw",
         "repo": "evil-markdown"
@@ -32,6 +36,10 @@
     "php-extras": {
         "owner": "arnested",
         "repo": "php-extras"
+    },
+    "rotate-text": {
+        "owner": "debug-ito",
+        "repo": "rotate-text.el"
     },
     "so-long": {
         "owner": "hlissner",

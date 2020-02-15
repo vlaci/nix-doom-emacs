@@ -4,12 +4,12 @@
         "args": {
             "owner": "hlissner",
             "repo": "doom-emacs",
-            "rev": "456b501aad3d3baecc61576ac94223e0a7c769db",
-            "sha256": "18pm7ywvxx2w3ghqhcr0mlfl8j05pl0rhawaazqfi38dv8x2yjbl"
+            "rev": "b0978a4526cfd78bb18e5279909c19bee97e9878",
+            "sha256": "0ydjzp87zcz4bfnqcqs0fyxdbv4273h21ir1sjny2lln3d3w7zzw"
         },
         "meta": {
-            "updated": "2020-02-08T10:06:12+00:00",
-            "rev": "456b501aad3d3baecc61576ac94223e0a7c769db"
+            "updated": "2020-02-15T09:39:33+00:00",
+            "rev": "b0978a4526cfd78bb18e5279909c19bee97e9878"
         }
     },
     "nix-straight.el": {
@@ -43,12 +43,12 @@
         "args": {
             "owner": "nix-community",
             "repo": "emacs-overlay",
-            "rev": "94ed874abf66c533df902c342cc93f12d208fc79",
-            "sha256": "1cqqzqgmnh7dj044dbvyw7hp0p1r8rbc62vg67r3vkykzzrzihl2"
+            "rev": "af3182aa950a3c591df7d2007fedf658c6cbc687",
+            "sha256": "09yqs9h4zwcshhkvzdzlkixs1mprdrmknh05kqv7c3pq1ir0daiz"
         },
         "meta": {
-            "updated": "2020-02-08T10:06:19+00:00",
-            "rev": "94ed874abf66c533df902c342cc93f12d208fc79"
+            "updated": "2020-02-15T09:39:40+00:00",
+            "rev": "af3182aa950a3c591df7d2007fedf658c6cbc687"
         }
     },
     "evil-markdown": {
@@ -121,12 +121,12 @@
         "args": {
             "owner": "emacs-straight",
             "repo": "org-mode",
-            "rev": "5ab6f6b77e1548b569439850fed6882da7fe400f",
-            "sha256": "09ankcy1fzabmdwn9qy1zh3qccga2233v5g3fywvgc8nmdfrjaqb"
+            "rev": "e361c640435af947fab201c1fe60f25843edb5e9",
+            "sha256": "15hbrsz45zhvh09qsijmw9x38zzaiymsmczafyfql68ar2s1slgj"
         },
         "meta": {
-            "updated": "2020-02-08T10:06:16+00:00",
-            "rev": "5ab6f6b77e1548b569439850fed6882da7fe400f"
+            "updated": "2020-02-15T09:39:37+00:00",
+            "rev": "e361c640435af947fab201c1fe60f25843edb5e9"
         }
     }
 }

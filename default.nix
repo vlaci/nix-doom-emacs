@@ -53,12 +53,10 @@
 , writeTextDir }:
 
 let
-  lock = pkgs.callPackage
-    "${builtins.fetchTarball https://github.com/vlaci/nix-lock/archive/develop.tar.gz}/lock.nix" {
-      path = ./derivations.lock;
-      overrides = dependencyOverrides;
-    };
-
+  sources = import ./nix/sources.nix;
+  lock = p: if dependencyOverrides ? p
+            then dependencyOverrides.${p}
+            else sources.${p};
   # Packages we need to get the default doom configuration run
   overrides = self: super: {
     evil-escape = super.evil-escape.overrideAttrs (esuper: {
@@ -67,7 +65,7 @@ let
     straightBuild = { pname, ... }@args: self.trivialBuild ({
       ename = pname;
       version = "1";
-      src = lock.get pname;
+      src = lock pname;
       buildPhase = ":";
     } // args);
     doom-snippets = self.straightBuild {
@@ -105,19 +103,17 @@ let
       pname = "php-extras";
     };
     rotate-text = self.straightBuild {
-      pname = "rotate-text";
-      ename = "rotate-text.el";
+      pname = "rotate-text.el";
     };
     so-long = self.straightBuild {
-      pname = "so-long";
-      ename = "emacs-so-long";
+      pname = "emacs-so-long";
     };
   };
 
   # Stage 1: prepare source for byte-compilation
   doomSrc = stdenv.mkDerivation {
     name = "doom-src";
-    src = lock.get "doom-emacs";
+    src = lock "doom-emacs";
     phases = ["unpackPhase" "patchPhase" "installPhase"];
     patches = [
       (substituteAll {
@@ -132,12 +128,12 @@ let
   };
 
   # Bundled version of `emacs-overlay`
-  emacs-overlay = import (lock.get "emacs-overlay") pkgs pkgs;
+  emacs-overlay = import (lock "emacs-overlay") pkgs pkgs;
 
   # Stage 2: install dependencies and byte-compile prepared source
   doomLocal =
     let
-      straight-env = pkgs.callPackage (lock.get "nix-straight.el") {
+      straight-env = pkgs.callPackage (lock "nix-straight.el") {
         emacsPackages =
           if bundledPackages then
             let

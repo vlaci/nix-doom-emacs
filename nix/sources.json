@@ -95,18 +95,6 @@
         "url": "https://github.com/vlaci/nix-straight.el/archive/446f3d70f1816305130f307c0cf2bc8db77ed698.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
-    "nixpkgs": {
-        "branch": "nixos-19.09",
-        "description": "A read-only mirror of NixOS/nixpkgs tracking the released channels. Send issues and PRs to",
-        "homepage": "https://github.com/NixOS/nixpkgs",
-        "owner": "NixOS",
-        "repo": "nixpkgs-channels",
-        "rev": "8731aaaf8b30888bc24994096db830993090d7c4",
-        "sha256": "1hcc89rxi47nb0mpk05nl9rbbb04kfw97xfydhpmmgh57yrp3zqa",
-        "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs-channels/archive/8731aaaf8b30888bc24994096db830993090d7c4.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
     "org-mode": {
         "branch": "master",
         "description": "Mirror of org-mode from orgmode.org",

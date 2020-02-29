@@ -54,7 +54,7 @@
 
 let
   sources = import ./nix/sources.nix;
-  lock = p: if dependencyOverrides ? p
+  lock = p: if dependencyOverrides ? ${p}
             then dependencyOverrides.${p}
             else sources.${p};
   # Packages we need to get the default doom configuration run

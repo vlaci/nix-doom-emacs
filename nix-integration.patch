@@ -18,7 +18,7 @@ index cb12f8d08..03f370691 100644
  `doom-etc-dir' and `doom-cache-dir'. Must end with a slash.")
  
 -(defconst doom-etc-dir (concat doom-local-dir "etc/")
-+(defconst doom-etc-dir "~/.local/doom"
++(defconst doom-etc-dir "~/.local/doom/"
    "Directory for non-volatile local storage.
  
  Use this for files that don't change much, like server binaries, external

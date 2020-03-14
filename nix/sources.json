@@ -5,10 +5,10 @@
         "homepage": "",
         "owner": "hlissner",
         "repo": "doom-emacs",
-        "rev": "cb4f9b86c6d9aa732825cb4220b14b8da46de518",
-        "sha256": "0a7mx497s78j1x5fnkwm4wwgqflkprn8rmfk563bza3kz8g04f4b",
+        "rev": "4b20c7206ef92ac4639c412beca813ebc15e4e88",
+        "sha256": "1ymgka3sminpvhjgicdhy3h64krsq1absrwpccis5hfpfsmc1j9p",
         "type": "tarball",
-        "url": "https://github.com/hlissner/doom-emacs/archive/cb4f9b86c6d9aa732825cb4220b14b8da46de518.tar.gz",
+        "url": "https://github.com/hlissner/doom-emacs/archive/4b20c7206ef92ac4639c412beca813ebc15e4e88.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "doom-snippets": {
@@ -17,10 +17,10 @@
         "homepage": "",
         "owner": "hlissner",
         "repo": "doom-snippets",
-        "rev": "1449fdaf9a3755c16c6b5b7c0de36b9de520afed",
-        "sha256": "0mbjdgn602bgnx2mi5925m4ss4y95ywh7jk1qnka74zpa34dfgnq",
+        "rev": "bc897010c5c4af265436f4df05913731ce260839",
+        "sha256": "0d2xi6gxrfx4bj0bfz3qxlahcmvp9jdargfwlhbygb9b5vdib565",
         "type": "tarball",
-        "url": "https://github.com/hlissner/doom-snippets/archive/1449fdaf9a3755c16c6b5b7c0de36b9de520afed.tar.gz",
+        "url": "https://github.com/hlissner/doom-snippets/archive/bc897010c5c4af265436f4df05913731ce260839.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "emacs-overlay": {
@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "b315f578a3b8bbb7a13551f45a0d45c331844cb0",
-        "sha256": "0mkv428413d7pf4y0v775z8yzyzfg0rhnmnipzvi03pnl3f3wm6z",
+        "rev": "b8cd1d51efb07a077732478afee31d1f23dcd5f7",
+        "sha256": "1437741vwi65y9yyakjv6wrrgyd8n5z4c0ys7wm0xf7ns7w0n73f",
         "type": "tarball",
-        "url": "https://github.com/nix-community/emacs-overlay/archive/b315f578a3b8bbb7a13551f45a0d45c331844cb0.tar.gz",
+        "url": "https://github.com/nix-community/emacs-overlay/archive/b8cd1d51efb07a077732478afee31d1f23dcd5f7.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "emacs-so-long": {
@@ -101,10 +101,10 @@
         "homepage": "https://code.orgmode.org/bzg/org-mode",
         "owner": "emacs-straight",
         "repo": "org-mode",
-        "rev": "8ac16009745adf52a4b3c6d5e4a080243fc1aff2",
-        "sha256": "0zr0ll7alb29150h9zcds0ck42as06dwfx8aj14gyg1lq95lszwj",
+        "rev": "d9b1fb1e8c62248cb1845038c915969e7bbca9cb",
+        "sha256": "0vdqrzmdqcniy9lvg965rgq8nad2czq74hpw429rmfydfigb87kh",
         "type": "tarball",
-        "url": "https://github.com/emacs-straight/org-mode/archive/8ac16009745adf52a4b3c6d5e4a080243fc1aff2.tar.gz",
+        "url": "https://github.com/emacs-straight/org-mode/archive/d9b1fb1e8c62248cb1845038c915969e7bbca9cb.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "org-yt": {

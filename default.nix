@@ -49,7 +49,7 @@
 , runCommand
 , fetchFromGitHub
 , substituteAll
-, writeScriptBin
+, writeShellScriptBin
 , writeTextDir }:
 
 let
@@ -163,8 +163,9 @@ let
 
       # I don't know why but byte-compilation somehow triggers Emacs to look for
       # the git executable. It does not seem to be executed though...
-      git = writeScriptBin "git" ''
-        >&2 echo Executing git is not allowed; command line: "$@"
+      git = writeShellScriptBin "git" ''
+        >&2 echo "Executing git is not allowed; command line:" "$@"
+        exit 127
       '';
     in (straight-env.emacsEnv {
       inherit packages;

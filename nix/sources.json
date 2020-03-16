@@ -84,15 +84,15 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nix-straight.el": {
-        "branch": "v1.2.0",
+        "branch": "v2.0.0",
         "description": null,
         "homepage": null,
         "owner": "vlaci",
         "repo": "nix-straight.el",
-        "rev": "446f3d70f1816305130f307c0cf2bc8db77ed698",
-        "sha256": "1p4yp46kwhii8w9yf882fca9r3addn91wg6f4mv62wnkfm0i6q0f",
+        "rev": "b0ac8033a448c609645b4d9b5ff5f90de608f326",
+        "sha256": "1vgdjfyz8964mixwfcv30lmkjfgsmsw8vl23x1964izr2cfh2dy6",
         "type": "tarball",
-        "url": "https://github.com/vlaci/nix-straight.el/archive/446f3d70f1816305130f307c0cf2bc8db77ed698.tar.gz",
+        "url": "https://github.com/vlaci/nix-straight.el/archive/b0ac8033a448c609645b4d9b5ff5f90de608f326.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "org-mode": {

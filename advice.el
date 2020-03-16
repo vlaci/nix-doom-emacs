@@ -17,3 +17,7 @@
 ;;; org is not installed from git, so no fixup is needed
 (advice-add '+org-fix-package-h
             :override (lambda (&rest r)))
+
+;; just use straight provided by nix
+(advice-add 'doom-ensure-straight
+            :override (lambda (&rest r) (require 'straight)))

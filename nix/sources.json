@@ -142,5 +142,17 @@
         "type": "tarball",
         "url": "https://github.com/debug-ito/rotate-text.el/archive/48f193697db996855aee1ad2bc99b38c6646fe76.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "ob-racket": {
+        "branch": "master",
+        "description": "Org babel support for racket",
+        "homepage": "https://github.com/xchrishawk/ob-racket",
+        "owner": "xchrishawk",
+        "repo": "ob-racket",
+        "rev": "83457ec9e1e96a29fd2086ed19432b9d75787673",
+        "sha256": "0xcjk4wx9gr6adsnb4gnklyx7im1aj7l5kqlwg1ysvwp6061h5dc",
+        "type": "tarball",
+        "url": "https://github.com/xchrishawk/ob-racket/archive/83457ec9e1e96a29fd2086ed19432b9d75787673.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }

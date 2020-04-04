@@ -108,6 +108,9 @@ let
     so-long = self.straightBuild {
       pname = "emacs-so-long";
     };
+    ob-racket = self.straightBuild {
+      pname = "ob-racket";
+    };
   };
 
   # Stage 1: prepare source for byte-compilation

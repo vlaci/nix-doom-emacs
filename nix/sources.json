@@ -5,10 +5,10 @@
         "homepage": "",
         "owner": "hlissner",
         "repo": "doom-emacs",
-        "rev": "4b20c7206ef92ac4639c412beca813ebc15e4e88",
-        "sha256": "1ymgka3sminpvhjgicdhy3h64krsq1absrwpccis5hfpfsmc1j9p",
+        "rev": "a381f592610bfa485c26112ad1030c3331c80b32",
+        "sha256": "1pi48s4smqbfr97mm75qc33wfg0mpi077j6mwygs2minglwcl8i4",
         "type": "tarball",
-        "url": "https://github.com/hlissner/doom-emacs/archive/4b20c7206ef92ac4639c412beca813ebc15e4e88.tar.gz",
+        "url": "https://github.com/hlissner/doom-emacs/archive/a381f592610bfa485c26112ad1030c3331c80b32.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "doom-snippets": {
@@ -17,10 +17,10 @@
         "homepage": "",
         "owner": "hlissner",
         "repo": "doom-snippets",
-        "rev": "bc897010c5c4af265436f4df05913731ce260839",
-        "sha256": "0d2xi6gxrfx4bj0bfz3qxlahcmvp9jdargfwlhbygb9b5vdib565",
+        "rev": "2a0c3cf901c645668f9f4e20f845b145dd1cbfa8",
+        "sha256": "12dkb4kjsdcw2w7bm1azrzr45szxmjml4ynblcj08pxywrxqdyzj",
         "type": "tarball",
-        "url": "https://github.com/hlissner/doom-snippets/archive/bc897010c5c4af265436f4df05913731ce260839.tar.gz",
+        "url": "https://github.com/hlissner/doom-snippets/archive/2a0c3cf901c645668f9f4e20f845b145dd1cbfa8.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "emacs-overlay": {
@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "b8cd1d51efb07a077732478afee31d1f23dcd5f7",
-        "sha256": "1437741vwi65y9yyakjv6wrrgyd8n5z4c0ys7wm0xf7ns7w0n73f",
+        "rev": "9b16ad3d07f32f7d9ade873c08f0afe93e9bffd1",
+        "sha256": "1bkh3p4ccp7drgpd2axvzwwb1w2pd5bnb34qqy4kj0klh1cx9ib4",
         "type": "tarball",
-        "url": "https://github.com/nix-community/emacs-overlay/archive/b8cd1d51efb07a077732478afee31d1f23dcd5f7.tar.gz",
+        "url": "https://github.com/nix-community/emacs-overlay/archive/9b16ad3d07f32f7d9ade873c08f0afe93e9bffd1.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "emacs-so-long": {
@@ -95,16 +95,28 @@
         "url": "https://github.com/vlaci/nix-straight.el/archive/b0ac8033a448c609645b4d9b5ff5f90de608f326.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "ob-racket": {
+        "branch": "master",
+        "description": "Org babel support for racket",
+        "homepage": "https://github.com/xchrishawk/ob-racket",
+        "owner": "xchrishawk",
+        "repo": "ob-racket",
+        "rev": "83457ec9e1e96a29fd2086ed19432b9d75787673",
+        "sha256": "0xcjk4wx9gr6adsnb4gnklyx7im1aj7l5kqlwg1ysvwp6061h5dc",
+        "type": "tarball",
+        "url": "https://github.com/xchrishawk/ob-racket/archive/83457ec9e1e96a29fd2086ed19432b9d75787673.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "org-mode": {
         "branch": "master",
         "description": "Mirror of org-mode from orgmode.org",
         "homepage": "https://code.orgmode.org/bzg/org-mode",
         "owner": "emacs-straight",
         "repo": "org-mode",
-        "rev": "d9b1fb1e8c62248cb1845038c915969e7bbca9cb",
-        "sha256": "0vdqrzmdqcniy9lvg965rgq8nad2czq74hpw429rmfydfigb87kh",
+        "rev": "3c87b8263d12cec1dce5b09261b8d2d1af383c06",
+        "sha256": "1qq3rj58449v1cm3fzanvilvm8cxg0n4faa81v6cbsw15jx21yp9",
         "type": "tarball",
-        "url": "https://github.com/emacs-straight/org-mode/archive/d9b1fb1e8c62248cb1845038c915969e7bbca9cb.tar.gz",
+        "url": "https://github.com/emacs-straight/org-mode/archive/3c87b8263d12cec1dce5b09261b8d2d1af383c06.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "org-yt": {
@@ -141,18 +153,6 @@
         "sha256": "02fkv45nbbqrv12czlinpr8qpsd7yjdhr628hl58n42w560qxrs8",
         "type": "tarball",
         "url": "https://github.com/debug-ito/rotate-text.el/archive/48f193697db996855aee1ad2bc99b38c6646fe76.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
-    "ob-racket": {
-        "branch": "master",
-        "description": "Org babel support for racket",
-        "homepage": "https://github.com/xchrishawk/ob-racket",
-        "owner": "xchrishawk",
-        "repo": "ob-racket",
-        "rev": "83457ec9e1e96a29fd2086ed19432b9d75787673",
-        "sha256": "0xcjk4wx9gr6adsnb4gnklyx7im1aj7l5kqlwg1ysvwp6061h5dc",
-        "type": "tarball",
-        "url": "https://github.com/xchrishawk/ob-racket/archive/83457ec9e1e96a29fd2086ed19432b9d75787673.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }

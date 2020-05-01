@@ -5,10 +5,10 @@
         "homepage": "",
         "owner": "hlissner",
         "repo": "doom-emacs",
-        "rev": "8f76ed93f95bb970dd572a432c73e1463ca65450",
-        "sha256": "0xdki6y1plp1p4qmfy6j0rm5kfxk27i43xja899ncbz6xbpc4sbk",
+        "rev": "03ecfed1a7c30ab2dc4dd8b1fe8b34557c30cdd0",
+        "sha256": "03sgyyciskfx2rj62ph7maciqcanbz81hrd2az4amscxznawl3rb",
         "type": "tarball",
-        "url": "https://github.com/hlissner/doom-emacs/archive/8f76ed93f95bb970dd572a432c73e1463ca65450.tar.gz",
+        "url": "https://github.com/hlissner/doom-emacs/archive/03ecfed1a7c30ab2dc4dd8b1fe8b34557c30cdd0.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "doom-snippets": {
@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "e0c5ba2b66db41f2800feab2969d4e83f24eda6f",
-        "sha256": "1s0mmw6vaz46x9xf7gwa13l0ymhzwqahl44574qnbd3lqcfpdw1w",
+        "rev": "65a1161c82ea62d1edd6d415d432b1c01eceacfc",
+        "sha256": "1mpgphzhzz0gkcbx2gxhv5h8w3lbs7l3ghk64j8xapj3g2cqfycx",
         "type": "tarball",
-        "url": "https://github.com/nix-community/emacs-overlay/archive/e0c5ba2b66db41f2800feab2969d4e83f24eda6f.tar.gz",
+        "url": "https://github.com/nix-community/emacs-overlay/archive/65a1161c82ea62d1edd6d415d432b1c01eceacfc.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "emacs-so-long": {
@@ -113,10 +113,10 @@
         "homepage": "https://code.orgmode.org/bzg/org-mode",
         "owner": "emacs-straight",
         "repo": "org-mode",
-        "rev": "31068373dc7bfe5c3a0268a9f1bcc0770661c7d0",
-        "sha256": "0mmcwc31lwxa512i5miw7sxly9bykpv0k4s19fwwsznhj2kkmj8l",
+        "rev": "609e4f004b6dec83a55dd76fa60c80bdaf0cc1bb",
+        "sha256": "1hsbp3cn1n1116x1m3313ra2fib6y6vzvrzwpdl8lnnxfskipjc2",
         "type": "tarball",
-        "url": "https://github.com/emacs-straight/org-mode/archive/31068373dc7bfe5c3a0268a9f1bcc0770661c7d0.tar.gz",
+        "url": "https://github.com/emacs-straight/org-mode/archive/609e4f004b6dec83a55dd76fa60c80bdaf0cc1bb.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "org-yt": {

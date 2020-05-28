@@ -5,10 +5,10 @@
         "homepage": "",
         "owner": "hlissner",
         "repo": "doom-emacs",
-        "rev": "0edbf9cb04c01c4fe0de4fb91a2bd8a2f086e57b",
-        "sha256": "1zwc1s2c0wkca62y65sdja4hblz5gkbnb1g5da40h3d052arn6bg",
+        "rev": "abb9ab7674601c2e90ecf1ca29f575a1effe9a4c",
+        "sha256": "01445q0sjchymdd9s8iyfczlwnrdjrxfq7h9hz27hd38czb45rll",
         "type": "tarball",
-        "url": "https://github.com/hlissner/doom-emacs/archive/0edbf9cb04c01c4fe0de4fb91a2bd8a2f086e57b.tar.gz",
+        "url": "https://github.com/hlissner/doom-emacs/archive/abb9ab7674601c2e90ecf1ca29f575a1effe9a4c.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "doom-snippets": {
@@ -17,10 +17,10 @@
         "homepage": "",
         "owner": "hlissner",
         "repo": "doom-snippets",
-        "rev": "422f683adfbec1b01fe00524690b64dc9e702ae0",
-        "sha256": "1n1n2hid0cn1dkkivxl5p4c06mvdcnfpyv94f2gw8333bb3hyihc",
+        "rev": "525aea97f564d66595b3db4b9199b3ed953beb52",
+        "sha256": "0fj95zslj8bz6p32l6wwpjj5mmj5ga3kjrfrn31pmz4zidxm1230",
         "type": "tarball",
-        "url": "https://github.com/hlissner/doom-snippets/archive/422f683adfbec1b01fe00524690b64dc9e702ae0.tar.gz",
+        "url": "https://github.com/hlissner/doom-snippets/archive/525aea97f564d66595b3db4b9199b3ed953beb52.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "emacs-overlay": {
@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "f19396038bb9b82961b3fe4828c7a9376c8a07a4",
-        "sha256": "0995bhd05756xansqw9k6714wxdb1rjx7n74wq1gqzd7kz1dx3sq",
+        "rev": "9c64445d5e33e24a1c409cb426a9754c4142a65d",
+        "sha256": "13hgayxm7vlyfs3zjp0nmblqannygfpw5fib3pwa013i03cvwnrs",
         "type": "tarball",
-        "url": "https://github.com/nix-community/emacs-overlay/archive/f19396038bb9b82961b3fe4828c7a9376c8a07a4.tar.gz",
+        "url": "https://github.com/nix-community/emacs-overlay/archive/9c64445d5e33e24a1c409cb426a9754c4142a65d.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "emacs-so-long": {
@@ -53,10 +53,10 @@
         "homepage": null,
         "owner": "Somelauw",
         "repo": "evil-markdown",
-        "rev": "46cd81b37991c4325fc24015a610f832b0ff995d",
-        "sha256": "0mad8sp5y9vyk28595qygspnyh8bfmb1fbxjlw70qwc1kdn822n4",
+        "rev": "685d7fbb81bc02fa32779d2a127b99a0c8c7436b",
+        "sha256": "1z1sjn6dcqv8mmkh6nfcwhnql2z6xr9yx3hs77bfxj79pf3c466p",
         "type": "tarball",
-        "url": "https://github.com/Somelauw/evil-markdown/archive/46cd81b37991c4325fc24015a610f832b0ff995d.tar.gz",
+        "url": "https://github.com/Somelauw/evil-markdown/archive/685d7fbb81bc02fa32779d2a127b99a0c8c7436b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "evil-org-mode": {
@@ -113,10 +113,10 @@
         "homepage": "https://code.orgmode.org/bzg/org-mode",
         "owner": "emacs-straight",
         "repo": "org-mode",
-        "rev": "e5eda0beeb3b6b0666550091bcc0df066d52c008",
-        "sha256": "0v2zmii6w1n56kd5jqy9sj89gk59jck585nbhvaai6qhfb9fr243",
+        "rev": "3dc582c8d5ac08e10ec3f31c41b6daabeb2d3772",
+        "sha256": "0x6bg31ss0m236dysjnhsrip18dpjakfsxccbayb135bycyh1ib8",
         "type": "tarball",
-        "url": "https://github.com/emacs-straight/org-mode/archive/e5eda0beeb3b6b0666550091bcc0df066d52c008.tar.gz",
+        "url": "https://github.com/emacs-straight/org-mode/archive/3dc582c8d5ac08e10ec3f31c41b6daabeb2d3772.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "org-yt": {

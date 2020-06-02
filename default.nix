@@ -111,6 +111,19 @@ let
     ob-racket = self.straightBuild {
       pname = "ob-racket";
     };
+
+    # dune has a nontrivial derivation, which does not buildable from the melpa
+    # wrapper falling back to the one in nixpkgs
+    dune = pkgs.dune.overrideAttrs (old: {
+      # Emacs derivations require an ename attribute
+      ename = old.pname;
+
+      # Need to adjust paths here match what doom expects
+      postInstall = ''
+        mkdir -p $out/share/emacs/site-lisp/editor-integration
+        ln -snf $out/share/emacs/site-lisp $out/share/emacs/site-lisp/editor-integration/emacs
+      '';
+    });
   };
 
   # Stage 1: prepare source for byte-compilation

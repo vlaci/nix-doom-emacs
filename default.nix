@@ -80,6 +80,11 @@ let
     evil-quick-diff = self.straightBuild {
       pname = "evil-quick-diff";
     };
+    magit = super.magit.overrideAttrs (esuper: {
+      preBuild = ''
+        make VERSION="${esuper.version}" -C lisp magit-version.el
+      '';
+    });
     org-mode = self.straightBuild rec {
       pname = "org-mode";
       version = "9.4";

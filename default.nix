@@ -172,19 +172,28 @@ let
     load-config-from-site
   ]));
 in
-pkgs.runCommand "doom-emacs" {
-  inherit emacs;
-  buildInputs = [ emacs ];
-  nativeBuildInputs = [ makeWrapper ];
-} ''
-    mkdir -p $out/bin
-    for prog in $emacs/bin/*; do
-      makeWrapper $prog $out/bin/$(basename $prog) --set DOOMDIR ${doomDir}
-    done
-    # emacsWithPackages assumes share/emacs/site-lisp/subdirs.el
-    # exists, but doesn't pass it along.  When home-manager calls
-    # emacsWithPackages again on this derivation, it fails due to
-    # a dangling link to subdirs.el.
-    # https://github.com/NixOS/nixpkgs/issues/66706
-    ln -s ${emacs.emacs}/share $out
-  ''
+emacs.overrideAttrs (esuper:
+  let cmd = ''
+      for prog in $out/bin/*; do
+        wrapProgram $out/bin/$(basename $prog) --set DOOMDIR ${doomDir}
+      done
+      # emacsWithPackages assumes share/emacs/site-lisp/subdirs.el
+      # exists, but doesn't pass it along.  When home-manager calls
+      # emacsWithPackages again on this derivation, it fails due to
+      # a dangling link to subdirs.el.
+      # https://github.com/NixOS/nixpkgs/issues/66706
+      rm -rf $out/share
+      ln -s ${esuper.emacs}/share $out
+    '';
+  in
+    if esuper ? buildCommand then
+      {
+        buildCommand = esuper.buildCommand + cmd;
+      }
+    else if esuper ? installPhase then
+      {
+        installPhase = esuper.installPhase + cmd;
+      }
+    else
+      abort "emacsWithPackages uses unknown derivation type"
+)

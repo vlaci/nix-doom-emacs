@@ -22,6 +22,7 @@ self: super: {
 
   evil-org = self.straightBuild {
     pname = "evil-org-mode";
+    ename = "evil-org";
   };
 
   evil-quick-diff = self.straightBuild {
@@ -61,10 +62,12 @@ self: super: {
 
   rotate-text = self.straightBuild {
     pname = "rotate-text.el";
+    ename = "rotate-text";
   };
 
   so-long = self.straightBuild {
     pname = "emacs-so-long";
+    ename = "so-long";
   };
 
   ob-racket = self.straightBuild {

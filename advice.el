@@ -1,4 +1,12 @@
 ;;; -*- lexical-binding: t; -*-
+
+;;; Skip Emacs's own package verification and let Nix do it for us.
+;;;
+;;; Having gnupg around the build triggers Emacs to use it for package signature
+;;; verification. This would not work anyway because the build sandbox does not
+;;; have a properly configured user home and environment.
+(setq package-check-signature nil)
+
 (advice-add 'nix-straight-get-used-packages
             :before (lambda (&rest r)
                       (message "[nix-doom-emacs] Advising doom installer to gather packages to install...")

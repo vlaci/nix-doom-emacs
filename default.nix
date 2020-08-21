@@ -187,7 +187,10 @@ in
 emacs.overrideAttrs (esuper:
   let cmd = ''
       for prog in $out/bin/*; do
-        wrapProgram $out/bin/$(basename $prog) --set DOOMDIR ${doomDir}
+        wrapProgram $out/bin/$(basename $prog) \
+                    --set DOOMDIR ${doomDir} \
+                    --set __DEBUG_doom_emacs_DIR ${doom-emacs} \
+                    --set __DEBUG_doomLocal_DIR ${doomLocal}
       done
       # emacsWithPackages assumes share/emacs/site-lisp/subdirs.el
       # exists, but doesn't pass it along.  When home-manager calls

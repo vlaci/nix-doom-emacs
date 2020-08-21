@@ -42,6 +42,10 @@ self: super: {
     '';
   });
 
+  nose = self.straightBuild {
+    pname = "nose";
+  };
+
   org-mode = self.straightBuild rec {
     pname = "org-mode";
     version = "9.4";

@@ -107,6 +107,18 @@
         "url": "https://github.com/vlaci/nix-straight.el/archive/9e6f7d71760b997b09d9bd3046257bc9ec17265b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "nose": {
+        "branch": "master",
+        "description": null,
+        "homepage": null,
+        "owner": "emacsattic",
+        "repo": "nose",
+        "rev": "f8528297519eba911696c4e68fa88892de9a7b72",
+        "sha256": "07bhzddaxdjd591xmg59yd657a1is0q515291jd83mjsmgq258bm",
+        "type": "tarball",
+        "url": "https://github.com/emacsattic/nose/archive/f8528297519eba911696c4e68fa88892de9a7b72.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "ob-racket": {
         "branch": "master",
         "description": "Org babel support for racket",

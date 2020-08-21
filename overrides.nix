@@ -19,6 +19,10 @@ self: super: {
     '';
   };
 
+  explain-pause-mode = self.straightBuild {
+    pname = "explain-pause-mode";
+  };
+
   evil-markdown = self.straightBuild {
     pname = "evil-markdown";
   };

@@ -5,10 +5,10 @@
         "homepage": "",
         "owner": "hlissner",
         "repo": "doom-emacs",
-        "rev": "d02d78c3fa8d100c096ed8f563b67c3b4ff057b3",
-        "sha256": "0rd74a3zl9cch4rhr0ybyzdvgx2n79jg50x6212f39hxkkhdwbmd",
+        "rev": "e54bb170c30c8d6d0e961d195e037c43612c23db",
+        "sha256": "0lkvv3g1mklbqpv35yzzw2bndagaznmf3vz72dr8kv8s6lflixy8",
         "type": "tarball",
-        "url": "https://github.com/hlissner/doom-emacs/archive/d02d78c3fa8d100c096ed8f563b67c3b4ff057b3.tar.gz",
+        "url": "https://github.com/hlissner/doom-emacs/archive/e54bb170c30c8d6d0e961d195e037c43612c23db.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "doom-snippets": {
@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "0d26f583bb6b4054fd253d6ad1f4739f5ff2b8f1",
-        "sha256": "0bl63dqm5wn0r35jhcjsw8gkcxxs5jjh7by701d69m3hj1jvlky9",
+        "rev": "532c7403232f77e45f70fb1c4124272843e89011",
+        "sha256": "0iqhxb91n1lyvk0axy2xhyq75z8z8n0qrv1xxrb6bsn3v0ym1cmp",
         "type": "tarball",
-        "url": "https://github.com/nix-community/emacs-overlay/archive/0d26f583bb6b4054fd253d6ad1f4739f5ff2b8f1.tar.gz",
+        "url": "https://github.com/nix-community/emacs-overlay/archive/532c7403232f77e45f70fb1c4124272843e89011.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "emacs-so-long": {
@@ -83,6 +83,18 @@
         "url": "https://github.com/rgrinberg/evil-quick-diff/archive/69c883720b30a892c63bc89f49d4f0e8b8028908.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "explain-pause-mode": {
+        "branch": "master",
+        "description": "top, but for Emacs.",
+        "homepage": "",
+        "owner": "lastquestion",
+        "repo": "explain-pause-mode",
+        "rev": "2356c8c3639cbeeb9751744dbe737267849b4b51",
+        "sha256": "0frnfwqal9mrnrz6q4v7vcai26ahaw81894arff1yjw372pfgv7v",
+        "type": "tarball",
+        "url": "https://github.com/lastquestion/explain-pause-mode/archive/2356c8c3639cbeeb9751744dbe737267849b4b51.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "nix-straight.el": {
         "branch": "v2.1.0",
         "description": null,
@@ -93,6 +105,18 @@
         "sha256": "0hh2aysmcd17zqpmj4l9gas6199p36ngk1h0ifk6dv5gs4782293",
         "type": "tarball",
         "url": "https://github.com/vlaci/nix-straight.el/archive/9e6f7d71760b997b09d9bd3046257bc9ec17265b.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nose": {
+        "branch": "master",
+        "description": null,
+        "homepage": null,
+        "owner": "emacsattic",
+        "repo": "nose",
+        "rev": "f8528297519eba911696c4e68fa88892de9a7b72",
+        "sha256": "07bhzddaxdjd591xmg59yd657a1is0q515291jd83mjsmgq258bm",
+        "type": "tarball",
+        "url": "https://github.com/emacsattic/nose/archive/f8528297519eba911696c4e68fa88892de9a7b72.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "ob-racket": {
@@ -113,10 +137,10 @@
         "homepage": "https://code.orgmode.org/bzg/org-mode",
         "owner": "emacs-straight",
         "repo": "org-mode",
-        "rev": "5417e384ebab58e560fe6a80eee7bc58b1ef8645",
-        "sha256": "1cpvvnw2nn4z3z5qcs775d6z2my2dkk9iwjwlbcqcx6ldgkv292j",
+        "rev": "220f2b0d93a6927eb673978c0042a1d4673e86aa",
+        "sha256": "0v7xzj6a9hr8yscnjs10adzj8xjlydipjwciapdwn0v9gh4llvd3",
         "type": "tarball",
-        "url": "https://github.com/emacs-straight/org-mode/archive/5417e384ebab58e560fe6a80eee7bc58b1ef8645.tar.gz",
+        "url": "https://github.com/emacs-straight/org-mode/archive/220f2b0d93a6927eb673978c0042a1d4673e86aa.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "org-yt": {

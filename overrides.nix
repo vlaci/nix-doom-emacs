@@ -19,6 +19,10 @@ self: super: {
     '';
   };
 
+  explain-pause-mode = self.straightBuild {
+    pname = "explain-pause-mode";
+  };
+
   evil-markdown = self.straightBuild {
     pname = "evil-markdown";
   };
@@ -37,6 +41,10 @@ self: super: {
       make VERSION="${esuper.version}" -C lisp magit-version.el
     '';
   });
+
+  nose = self.straightBuild {
+    pname = "nose";
+  };
 
   org-mode = self.straightBuild rec {
     pname = "org-mode";

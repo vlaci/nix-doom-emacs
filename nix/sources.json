@@ -17,10 +17,10 @@
         "homepage": "",
         "owner": "hlissner",
         "repo": "doom-snippets",
-        "rev": "60c57d66d2afd1798bff5023a54ab155f311746a",
-        "sha256": "1q8rzmkrgqdwmkdkcz9njbg3rmasrp19vwcqbqbbp6956i7mwyyq",
+        "rev": "94292e263b3351ddcd86dcb84acb19b8adaeab06",
+        "sha256": "0gx84ggg2226dwhqcsb8sk687ykbgp6sjxkryyh9jql01sjlb147",
         "type": "tarball",
-        "url": "https://github.com/hlissner/doom-snippets/archive/60c57d66d2afd1798bff5023a54ab155f311746a.tar.gz",
+        "url": "https://github.com/hlissner/doom-snippets/archive/94292e263b3351ddcd86dcb84acb19b8adaeab06.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "emacs-overlay": {

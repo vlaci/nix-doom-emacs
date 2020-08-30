@@ -7,15 +7,22 @@
 ;;; have a properly configured user home and environment.
 (setq package-check-signature nil)
 
+(defun nix-straight-inhibit-kill-emacs (arg)
+  (message "[nix-doom-emacs] Inhibiting (kill-emacs)"))
+
 (advice-add 'nix-straight-get-used-packages
-            :before (lambda (&rest r)
+            :around (lambda (orig-fn &rest r)
                       (message "[nix-doom-emacs] Advising doom installer to gather packages to install...")
                       (advice-add 'doom-autoloads-reload
                                   :override (lambda (&optional file force-p)
                                               (message "[nix-doom-emacs] Skipping generating autoloads...")))
                       (advice-add 'doom--print
                                   :override (lambda (output)
-                                            (message output)))))
+                                              (message output)))
+                      (advice-add 'kill-emacs
+                                  :override #'nix-straight-inhibit-kill-emacs)
+                      (apply orig-fn r)
+                      (advice-remove 'kill-emacs 'nix-straight-inhibit-kill-emacs)))
 
 (advice-add 'y-or-n-p
             :override (lambda (q)

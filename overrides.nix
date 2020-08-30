@@ -71,6 +71,18 @@ self: super: {
     pname = "php-extras";
   };
 
+  revealjs = self.straightBuild {
+    pname = "reveal.js";
+    ename = "revealjs";
+
+    installPhase = ''
+      LISPDIR=$out/share/emacs/site-lisp
+      install -d $LISPDIR
+
+      cp -r * $LISPDIR
+    '';
+  };
+
   rotate-text = self.straightBuild {
     pname = "rotate-text.el";
     ename = "rotate-text";

@@ -167,6 +167,18 @@
         "url": "https://github.com/arnested/php-extras/archive/d410c5af663c30c01d461ac476d1cbfbacb49367.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "reveal.js": {
+        "branch": "master",
+        "description": "The HTML Presentation Framework",
+        "homepage": "https://revealjs.com",
+        "owner": "hakimel",
+        "repo": "reveal.js",
+        "rev": "15815efe05ca69c35ce66cfdbf93316e1db66ecb",
+        "sha256": "1g3h710rhpyq4vnh6rgyay2dyjpw4rw99p062yhwhgrjkgjyzrc2",
+        "type": "tarball",
+        "url": "https://github.com/hakimel/reveal.js/archive/15815efe05ca69c35ce66cfdbf93316e1db66ecb.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "rotate-text.el": {
         "branch": "master",
         "description": "Emacs: cycle through words, symbols and patterns",

@@ -1,15 +1,12 @@
 diff --git a/core/core.el b/core/core.el
-index cb12f8d08..03f370691 100644
+index c8cfb0495..d8ed107bd 100644
 --- a/core/core.el
 +++ b/core/core.el
-@@ -63,22 +63,21 @@ decrease this. If you experience stuttering, increase this.")
-   "The root directory for Doom's modules. Must end with a slash.")
- 
+@@ -92,20 +92,20 @@ envvar will enable this at startup.")
  (defconst doom-local-dir
--  (if-let (localdir (getenv "DOOMLOCALDIR"))
--      (expand-file-name (file-name-as-directory localdir))
+   (if-let (localdir (getenv "DOOMLOCALDIR"))
+       (expand-file-name (file-name-as-directory localdir))
 -    (concat doom-emacs-dir ".local/"))
-+  (or (getenv "DOOMLOCALDIR")
 +      "@local@/")
    "Root directory for local storage.
  

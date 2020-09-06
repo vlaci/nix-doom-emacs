@@ -11,3 +11,18 @@ index 1e643cf49..501cbfba4 100644
  
  ;;;###autoload
  (defun doom/goto-private-init-file ()
+diff --git a/modules/app/rss/config.el b/modules/app/rss/config.el
+index c5657eec8..34f303420 100644
+--- a/modules/app/rss/config.el
++++ b/modules/app/rss/config.el
+@@ -18,8 +18,8 @@ easier to scroll through.")
+ (use-package! elfeed
+   :commands elfeed
+   :init
+-  (setq elfeed-db-directory (concat doom-local-dir "elfeed/db/")
+-        elfeed-enclosure-default-dir (concat doom-local-dir "elfeed/enclosures/"))
++  (setq elfeed-db-directory (concat doom-cache-dir "elfeed/db/")
++        elfeed-enclosure-default-dir (concat doom-cache-dir "elfeed/enclosures/"))
+   :config
+   (setq elfeed-search-filter "@2-week-ago "
+         elfeed-show-entry-switch #'pop-to-buffer

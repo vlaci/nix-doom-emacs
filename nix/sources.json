@@ -173,10 +173,10 @@
         "homepage": "https://revealjs.com",
         "owner": "hakimel",
         "repo": "reveal.js",
-        "rev": "15815efe05ca69c35ce66cfdbf93316e1db66ecb",
-        "sha256": "1g3h710rhpyq4vnh6rgyay2dyjpw4rw99p062yhwhgrjkgjyzrc2",
+        "rev": "e09437f4fac47305679374d2b2516a76f6ceb899",
+        "sha256": "0mppzm0cp5v4r7aqim2jbxji836di86an0p9j5wjmnlg5ali3y49",
         "type": "tarball",
-        "url": "https://github.com/hakimel/reveal.js/archive/15815efe05ca69c35ce66cfdbf93316e1db66ecb.tar.gz",
+        "url": "https://github.com/hakimel/reveal.js/archive/e09437f4fac47305679374d2b2516a76f6ceb899.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "rotate-text.el": {

@@ -5,10 +5,10 @@
         "homepage": "",
         "owner": "hlissner",
         "repo": "doom-emacs",
-        "rev": "092480152e2ad9c70b60c4aa89d87af02da9f997",
-        "sha256": "0hpapk8ajmcx08npkp0gdzn0vfmlmp5wsy9sinnyhhbj2b0z48bw",
+        "rev": "ae3a2fa8c27d8e392294904ec6986f860a57f38e",
+        "sha256": "1f3vz9f10qqcxb9lwa51jkvg01v276gb1ssg2gc9jmny2m84d987",
         "type": "tarball",
-        "url": "https://github.com/hlissner/doom-emacs/archive/092480152e2ad9c70b60c4aa89d87af02da9f997.tar.gz",
+        "url": "https://github.com/hlissner/doom-emacs/archive/ae3a2fa8c27d8e392294904ec6986f860a57f38e.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "doom-snippets": {
@@ -17,10 +17,10 @@
         "homepage": "",
         "owner": "hlissner",
         "repo": "doom-snippets",
-        "rev": "60c57d66d2afd1798bff5023a54ab155f311746a",
-        "sha256": "1q8rzmkrgqdwmkdkcz9njbg3rmasrp19vwcqbqbbp6956i7mwyyq",
+        "rev": "94292e263b3351ddcd86dcb84acb19b8adaeab06",
+        "sha256": "0gx84ggg2226dwhqcsb8sk687ykbgp6sjxkryyh9jql01sjlb147",
         "type": "tarball",
-        "url": "https://github.com/hlissner/doom-snippets/archive/60c57d66d2afd1798bff5023a54ab155f311746a.tar.gz",
+        "url": "https://github.com/hlissner/doom-snippets/archive/94292e263b3351ddcd86dcb84acb19b8adaeab06.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "emacs-overlay": {
@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "5d36f14d62da38e5f71c4dcc151ecbaa9feffbbc",
-        "sha256": "1nj5flxc9xwl9v9ay2d60z4gash37ppb1g66fwf9gmf54dyb3xhn",
+        "rev": "943ec43e54f5152c4d5d8d0076e72beea9a7ff5a",
+        "sha256": "1amckm9gnh8jr3f34m67im3fwjf5mm262m4sbar24j1f066dsgil",
         "type": "tarball",
-        "url": "https://github.com/nix-community/emacs-overlay/archive/5d36f14d62da38e5f71c4dcc151ecbaa9feffbbc.tar.gz",
+        "url": "https://github.com/nix-community/emacs-overlay/archive/943ec43e54f5152c4d5d8d0076e72beea9a7ff5a.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "emacs-so-long": {
@@ -83,6 +83,18 @@
         "url": "https://github.com/rgrinberg/evil-quick-diff/archive/69c883720b30a892c63bc89f49d4f0e8b8028908.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "explain-pause-mode": {
+        "branch": "master",
+        "description": "top, but for Emacs.",
+        "homepage": "",
+        "owner": "lastquestion",
+        "repo": "explain-pause-mode",
+        "rev": "2356c8c3639cbeeb9751744dbe737267849b4b51",
+        "sha256": "0frnfwqal9mrnrz6q4v7vcai26ahaw81894arff1yjw372pfgv7v",
+        "type": "tarball",
+        "url": "https://github.com/lastquestion/explain-pause-mode/archive/2356c8c3639cbeeb9751744dbe737267849b4b51.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "nix-straight.el": {
         "branch": "v2.1.0",
         "description": null,
@@ -93,6 +105,18 @@
         "sha256": "0hh2aysmcd17zqpmj4l9gas6199p36ngk1h0ifk6dv5gs4782293",
         "type": "tarball",
         "url": "https://github.com/vlaci/nix-straight.el/archive/9e6f7d71760b997b09d9bd3046257bc9ec17265b.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "nose": {
+        "branch": "master",
+        "description": null,
+        "homepage": null,
+        "owner": "emacsattic",
+        "repo": "nose",
+        "rev": "f8528297519eba911696c4e68fa88892de9a7b72",
+        "sha256": "07bhzddaxdjd591xmg59yd657a1is0q515291jd83mjsmgq258bm",
+        "type": "tarball",
+        "url": "https://github.com/emacsattic/nose/archive/f8528297519eba911696c4e68fa88892de9a7b72.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "ob-racket": {
@@ -113,10 +137,10 @@
         "homepage": "https://code.orgmode.org/bzg/org-mode",
         "owner": "emacs-straight",
         "repo": "org-mode",
-        "rev": "a1e5bee5cb9c34ceb8226597605a49638bee7cec",
-        "sha256": "17dysdgkwv1hgi95zv5rrkxn21rbp5jyb8w2grgh93nmw7psmlwf",
+        "rev": "7bc18ebbed409ace4665ec9c9910b2837834b03d",
+        "sha256": "1jn9jfliymvh8s7szzsybkhm4z3g7bw2zvc15k5waskn4zw07pph",
         "type": "tarball",
-        "url": "https://github.com/emacs-straight/org-mode/archive/a1e5bee5cb9c34ceb8226597605a49638bee7cec.tar.gz",
+        "url": "https://github.com/emacs-straight/org-mode/archive/7bc18ebbed409ace4665ec9c9910b2837834b03d.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "org-yt": {
@@ -141,6 +165,18 @@
         "sha256": "0mcgwisnqplav0ga8xqqw72523iv841wp2cyw7d4lkzgpiav51dg",
         "type": "tarball",
         "url": "https://github.com/arnested/php-extras/archive/d410c5af663c30c01d461ac476d1cbfbacb49367.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "reveal.js": {
+        "branch": "master",
+        "description": "The HTML Presentation Framework",
+        "homepage": "https://revealjs.com",
+        "owner": "hakimel",
+        "repo": "reveal.js",
+        "rev": "15815efe05ca69c35ce66cfdbf93316e1db66ecb",
+        "sha256": "1g3h710rhpyq4vnh6rgyay2dyjpw4rw99p062yhwhgrjkgjyzrc2",
+        "type": "tarball",
+        "url": "https://github.com/hakimel/reveal.js/archive/15815efe05ca69c35ce66cfdbf93316e1db66ecb.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "rotate-text.el": {

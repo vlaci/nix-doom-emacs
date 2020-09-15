@@ -19,6 +19,10 @@ self: super: {
     '';
   };
 
+  explain-pause-mode = self.straightBuild {
+    pname = "explain-pause-mode";
+  };
+
   evil-markdown = self.straightBuild {
     pname = "evil-markdown";
   };
@@ -37,6 +41,10 @@ self: super: {
       make VERSION="${esuper.version}" -C lisp magit-version.el
     '';
   });
+
+  nose = self.straightBuild {
+    pname = "nose";
+  };
 
   org-mode = self.straightBuild rec {
     pname = "org-mode";
@@ -61,6 +69,18 @@ self: super: {
 
   php-extras = self.straightBuild {
     pname = "php-extras";
+  };
+
+  revealjs = self.straightBuild {
+    pname = "reveal.js";
+    ename = "revealjs";
+
+    installPhase = ''
+      LISPDIR=$out/share/emacs/site-lisp
+      install -d $LISPDIR
+
+      cp -r * $LISPDIR
+    '';
   };
 
   rotate-text = self.straightBuild {

@@ -49,6 +49,7 @@
 , runCommand
 , fetchFromGitHub
 , substituteAll
+, writeShellScript
 , writeShellScriptBin
 , writeTextDir }:
 
@@ -171,11 +172,25 @@ let
   in (emacsPackages.emacsWithPackages (epkgs: [
     load-config-from-site
   ]));
+
+  build-summary = writeShellScript "build-summary" ''
+      BOLD=\\033[1m
+      GREEN=\\033[32m
+      RESET=\\033[0m
+
+      printf "\n''${GREEN}Successfully built nix-doom-emacs!''${RESET}\n"
+      printf "''${BOLD}  ==> doom-emacs is installed to ${doom-emacs}''${RESET}\n"
+      printf "''${BOLD}  ==> private configuration is installed to ${doomDir}''${RESET}\n"
+      printf "''${BOLD}  ==> Dependencies are installed to ${doomLocal}''${RESET}\n"
+  '';
 in
 emacs.overrideAttrs (esuper:
   let cmd = ''
       for prog in $out/bin/*; do
-        wrapProgram $out/bin/$(basename $prog) --set DOOMDIR ${doomDir}
+        wrapProgram $out/bin/$(basename $prog) \
+                    --set DOOMDIR ${doomDir} \
+                    --set __DEBUG_doom_emacs_DIR ${doom-emacs} \
+                    --set __DEBUG_doomLocal_DIR ${doomLocal}
       done
       # emacsWithPackages assumes share/emacs/site-lisp/subdirs.el
       # exists, but doesn't pass it along.  When home-manager calls
@@ -184,6 +199,7 @@ emacs.overrideAttrs (esuper:
       # https://github.com/NixOS/nixpkgs/issues/66706
       rm -rf $out/share
       ln -s ${esuper.emacs}/share $out
+      ${build-summary}
     '';
   in
     if esuper ? buildCommand then

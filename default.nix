@@ -24,6 +24,18 @@
      Only used to get emacs package, if `bundledPackages` is set.
   */
 , emacsPackages
+  /* Overlay to customize emacs (elisp) dependencies
+
+     See overrides.nix for addition examples.
+
+     Example:
+       emacsPackagesOverlay = self: super: {
+         magit-delta = super.magit-delta.overrideAttrs (esuper: {
+           buildInputs = esuper.buildInputs ++ [ pkgs.git ];
+         });
+       };
+  */
+, emacsPackagesOverlay ? self: super: {  }
   /* Use bundled revision of github.com/nix-community/emacs-overlay
      as `emacsPackages`.
   */
@@ -59,7 +71,8 @@ let
             then dependencyOverrides.${p}
             else sources.${p};
   # Packages we need to get the default doom configuration run
-  overrides = pkgs.callPackage ./overrides.nix { inherit lock; };
+  overrides = self: super:
+    (pkgs.callPackage ./overrides.nix { inherit lock; } self super) // (emacsPackagesOverlay self super);
 
   # Stage 1: prepare source for byte-compilation
   doomSrc = stdenv.mkDerivation {

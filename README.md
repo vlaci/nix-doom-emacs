@@ -46,3 +46,25 @@ instead of running emacs.d/bin/doom, once you have update your config files (pac
 ## Troubleshooting
 
 On macOS on a fresh install, you might run into the error `Too many files open`. running `ulimit -S -n 2048` will only work for the duration of your shell and will fix the error
+
+## Installing emacs packages
+
+In the initial packages.el instructions for how to install packages can be found.
+However some packages might require a particular software dependency to be installed.
+Trying to install those would give you an error of the type:
+`Searching for program: No such file or directory, git` (Missing git dependency)
+Here is how you would go installing [magit-delta](https://github.com/dandavison/magit-delta) for example (which requires git).
+
+under the line:
+`doomPrivateDir = ./doom.d;`
+in your configuration, you would add the following:
+
+```Nix
+  emacsPackagesOverlay = self: super: {
+     magit-delta = super.magit-delta.overrideAttrs (esuper: {
+       buildInputs = esuper.buildInputs ++ [ pkgs.git ];
+     });
+  };
+```
+to make the git dependency available.
+trying to rebuild doom-emacs with `home-manager switch` should work correctly now.

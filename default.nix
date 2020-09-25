@@ -94,6 +94,7 @@ let
   fmt = {
     reset=''\\033[0m'';
     bold=''\\033[1m'';
+    red=''\\033[31m'';
     green=''\\033[32m'';
   };
 
@@ -146,6 +147,22 @@ let
       preInstall = ''
           export DOOMDIR=${doomPrivateDir}
           export DOOMLOCALDIR=$out/
+
+          # Create a bogus $HOME directory because gccEmacs is known to require
+          # an existing home directory because the async worker process don't
+          # fully respect the value of 'comp-eln-load-path'.
+          export HOME=$(mktemp -d)
+      '';
+      postInstall = ''
+        # If gccEmacs or anything would write in $HOME, fail the build.
+        if [[ -z "$(find $HOME -maxdepth 0 -empty)" ]]; then
+          printf "${fmt.red}${fmt.bold}ERROR:${fmt.reset} "
+          printf "${fmt.red}doom-emacs build resulted in files being written in "'$HOME'" of the build sandbox.\n"
+          printf "Contents of "'$HOME'":\n"
+          find $HOME
+          printf ${fmt.reset}
+          exit 33
+        fi
       '';
     });
 

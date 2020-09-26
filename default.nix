@@ -91,6 +91,12 @@ let
     '';
   };
 
+  fmt = {
+    reset=''\\033[0m'';
+    bold=''\\033[1m'';
+    green=''\\033[32m'';
+  };
+
   # Bundled version of `emacs-overlay`
   emacs-overlay = import (lock "emacs-overlay") pkgs pkgs;
 
@@ -187,14 +193,10 @@ let
   ]));
 
   build-summary = writeShellScript "build-summary" ''
-      BOLD=\\033[1m
-      GREEN=\\033[32m
-      RESET=\\033[0m
-
-      printf "\n''${GREEN}Successfully built nix-doom-emacs!''${RESET}\n"
-      printf "''${BOLD}  ==> doom-emacs is installed to ${doom-emacs}''${RESET}\n"
-      printf "''${BOLD}  ==> private configuration is installed to ${doomDir}''${RESET}\n"
-      printf "''${BOLD}  ==> Dependencies are installed to ${doomLocal}''${RESET}\n"
+      printf "\n${fmt.green}Successfully built nix-doom-emacs!${fmt.reset}\n"
+      printf "${fmt.bold}  ==> doom-emacs is installed to ${doom-emacs}${fmt.reset}\n"
+      printf "${fmt.bold}  ==> private configuration is installed to ${doomDir}${fmt.reset}\n"
+      printf "${fmt.bold}  ==> Dependencies are installed to ${doomLocal}${fmt.reset}\n"
   '';
 in
 emacs.overrideAttrs (esuper:

@@ -26,11 +26,12 @@ index c8cfb0495..d8ed107bd 100644
    "Directory for volatile local storage.
  
  Use this for files that change often, like cache files. Must end with a slash.")
-@@ -276,7 +276,7 @@ config.el instead."
+@@ -276,7 +276,8 @@ config.el instead."
  ;; Don't store eln files in ~/.emacs.d/eln-cache (they are likely to be purged
  ;; when upgrading Doom).
  (when (boundp 'comp-eln-load-path)
 -  (add-to-list 'comp-eln-load-path (concat doom-cache-dir "eln/")))
++  (add-to-list 'comp-eln-load-path (concat doom-cache-dir "eln/"))
 +  (add-to-list 'comp-eln-load-path (concat doom-local-dir "cache/eln/")))
  
  (after! comp

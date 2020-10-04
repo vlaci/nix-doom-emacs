@@ -91,6 +91,13 @@ let
     '';
   };
 
+  fmt = {
+    reset=''\\033[0m'';
+    bold=''\\033[1m'';
+    red=''\\033[31m'';
+    green=''\\033[32m'';
+  };
+
   # Bundled version of `emacs-overlay`
   emacs-overlay = import (lock "emacs-overlay") pkgs pkgs;
 
@@ -140,6 +147,22 @@ let
       preInstall = ''
           export DOOMDIR=${doomPrivateDir}
           export DOOMLOCALDIR=$out/
+
+          # Create a bogus $HOME directory because gccEmacs is known to require
+          # an existing home directory because the async worker process don't
+          # fully respect the value of 'comp-eln-load-path'.
+          export HOME=$(mktemp -d)
+      '';
+      postInstall = ''
+        # If gccEmacs or anything would write in $HOME, fail the build.
+        if [[ -z "$(find $HOME -maxdepth 0 -empty)" ]]; then
+          printf "${fmt.red}${fmt.bold}ERROR:${fmt.reset} "
+          printf "${fmt.red}doom-emacs build resulted in files being written in "'$HOME'" of the build sandbox.\n"
+          printf "Contents of "'$HOME'":\n"
+          find $HOME
+          printf ${fmt.reset}
+          exit 33
+        fi
       '';
     });
 
@@ -169,7 +192,11 @@ let
       mkdir -p $out
       cp -r ${doomPrivateDir}/* $out
       chmod u+w $out/config.el
-      cat $extraConfigPath >> $out/config.el
+      cat $extraConfigPath > $out/config.extra.el
+      cat > $out/config.el << EOF
+      (load "${builtins.toString doomPrivateDir}/config.el")
+      (load "$out/config.extra.el")
+      EOF
   '';
 
   # Stage 5: catch-all wrapper capable to run doom-emacs even
@@ -187,14 +214,10 @@ let
   ]));
 
   build-summary = writeShellScript "build-summary" ''
-      BOLD=\\033[1m
-      GREEN=\\033[32m
-      RESET=\\033[0m
-
-      printf "\n''${GREEN}Successfully built nix-doom-emacs!''${RESET}\n"
-      printf "''${BOLD}  ==> doom-emacs is installed to ${doom-emacs}''${RESET}\n"
-      printf "''${BOLD}  ==> private configuration is installed to ${doomDir}''${RESET}\n"
-      printf "''${BOLD}  ==> Dependencies are installed to ${doomLocal}''${RESET}\n"
+      printf "\n${fmt.green}Successfully built nix-doom-emacs!${fmt.reset}\n"
+      printf "${fmt.bold}  ==> doom-emacs is installed to ${doom-emacs}${fmt.reset}\n"
+      printf "${fmt.bold}  ==> private configuration is installed to ${doomDir}${fmt.reset}\n"
+      printf "${fmt.bold}  ==> Dependencies are installed to ${doomLocal}${fmt.reset}\n"
   '';
 in
 emacs.overrideAttrs (esuper:

@@ -1,16 +1,17 @@
 diff --git a/core/core.el b/core/core.el
-index c8cfb0495..d8ed107bd 100644
+index 3516755c2..e5054a966 100644
 --- a/core/core.el
 +++ b/core/core.el
-@@ -92,20 +92,20 @@ envvar will enable this at startup.")
+@@ -97,7 +97,7 @@ envvar will enable this at startup.")
  (defconst doom-local-dir
    (if-let (localdir (getenv "DOOMLOCALDIR"))
        (expand-file-name (file-name-as-directory localdir))
 -    (concat doom-emacs-dir ".local/"))
-+      "@local@/")
++      "/nix/store/i7frmdcw2pz72h0krsxyqgss00siwd45-straight-emacs-env/")
    "Root directory for local storage.
  
  Use this as a storage location for this system's installation of Doom Emacs.
+@@ -105,13 +105,13 @@ Use this as a storage location for this system's installation of Doom Emacs.
  These files should not be shared across systems. By default, it is used by
  `doom-etc-dir' and `doom-cache-dir'. Must end with a slash.")
  
@@ -26,7 +27,7 @@ index c8cfb0495..d8ed107bd 100644
    "Directory for volatile local storage.
  
  Use this for files that change often, like cache files. Must end with a slash.")
-@@ -276,7 +276,8 @@ config.el instead."
+@@ -282,7 +282,8 @@ config.el instead."
  ;; Don't store eln files in ~/.emacs.d/eln-cache (they are likely to be purged
  ;; when upgrading Doom).
  (when (boundp 'comp-eln-load-path)
@@ -35,4 +36,4 @@ index c8cfb0495..d8ed107bd 100644
 +  (add-to-list 'comp-eln-load-path (concat doom-local-dir "cache/eln/")))
  
  (after! comp
-   ;; HACK `comp-eln-load-path' isn't fully respected yet, because native
+   ;; HACK Disable native-compilation for some troublesome packages

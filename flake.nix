@@ -4,8 +4,6 @@
     inputs = {
       home-manager.url = "github:rycee/home-manager";
       nix-doom-emacs.url = "github:vlaci/nix-doom-emacs/flake";
-      doomPrivateDir.url = "/path/to/doom.d";
-      doomPrivateDir.flake = false;
     };
 
     outputs = {
@@ -13,7 +11,6 @@
       nixpkgs,
       home-manager,
       nix-doom-emacs,
-      doomPrivateDir,
       ...
     }: {
       nixosConfigurations.exampleHost = nixpkgs.lib.nixosSystem {
@@ -25,7 +22,7 @@
               imports = [ nix-doom-emacs.hmModule ];
               home.doom-emacs = {
                 enable = true;
-                inherit doomPrivateDir;
+                doomPrivateDir = ./path/to/doom.d;
               };
             };
           }

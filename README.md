@@ -33,6 +33,41 @@ in {
 }
 ```
 
+Using `flake.nix`:
+
+``` nix
+{
+  inputs = {
+    home-manager.url = "github:rycee/home-manager";
+    nix-doom-emacs.url = "github:vlaci/nix-doom-emacs/flake";
+  };
+
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    nix-doom-emacs,
+    ...
+  }: {
+    nixosConfigurations.exampleHost = nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.users.exampleUser = { pkgs, ... }: {
+            imports = [ nix-doom-emacs.hmModule ];
+            home.doom-emacs = {
+              enable = true;
+              doomPrivateDir = ./doom.d;
+            };
+          };
+        }
+      ];
+    };
+  };
+}
+```
+
 ## Under the hood
 
 This expression leverages

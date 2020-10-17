@@ -14,6 +14,7 @@ in
         The specified directory should  contain yoour `init.el`, `config.el` and
         `packages.el` files.
       '';
+      apply = path: builtins.path { inherit path; };
     };
     extraConfig = mkOption {
       description = ''

@@ -15,7 +15,7 @@ compatible with the `doom-emacs` requirements.
 
 Using [home-manager](https://github.com/rycee/home-manager):
 
- ``` nix
+``` nix
 { pkgs, ... }:
 
 let

@@ -40,6 +40,17 @@ in
       default = [ ];
       example = literalExample "[ pkgs.mu ]";
     };
+    emacsPackage = mkOption {
+      description = ''
+        Emacs package to use.
+
+        Override this if you want to use a custom emacs derivation to base
+        `doom-emacs` on.
+      '';
+      type = with types; package;
+      default = pkgs.emacs;
+      example = literalExample "pkgs.emacs";
+    };
     package = mkOption {
       internal = true;
     };
@@ -49,6 +60,7 @@ in
     let
       emacs = pkgs.callPackage self {
         extraPackages = (epkgs: cfg.extraPackages);
+        emacsPackages = pkgs.emacsPackagesFor cfg.emacsPackage;
         inherit (cfg) doomPrivateDir extraConfig;
         dependencyOverrides = inputs;
       };

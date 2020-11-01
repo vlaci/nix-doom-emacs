@@ -3,6 +3,12 @@
 let
   cfg = config.programs.doom-emacs;
   inherit (lib) literalExample mkEnableOption mkIf mkOption types;
+  overlayType = lib.mkOptionType {
+    name = "overlay";
+    description = "Emacs packages overlay";
+    check = lib.isFunction;
+    merge = lib.mergeOneOption;
+  };
 in
 {
   options.programs.doom-emacs = {
@@ -51,6 +57,24 @@ in
       default = pkgs.emacs;
       example = literalExample "pkgs.emacs";
     };
+    emacsPackagesOverlay = mkOption {
+      description = ''
+        Overlay to customize emacs (elisp) dependencies.
+
+        As inputs are gathered dynamically, this is the only way to hook into
+        package customization.
+      '';
+      type = with types; overlayType;
+      default = self: super: {  };
+      defaultText = "self: super {  }";
+      example = literalExample ''
+        self: super: {
+          magit-delta = super.magit-delta.overrideAttrs (esuper: {
+            buildInputs = esuper.buildInputs ++ [ pkgs.git ];
+          });
+        };
+      '';
+    };
     package = mkOption {
       internal = true;
     };
@@ -61,7 +85,7 @@ in
       emacs = pkgs.callPackage self {
         extraPackages = (epkgs: cfg.extraPackages);
         emacsPackages = pkgs.emacsPackagesFor cfg.emacsPackage;
-        inherit (cfg) doomPrivateDir extraConfig;
+        inherit (cfg) doomPrivateDir extraConfig emacsPackagesOverlay;
         dependencyOverrides = inputs;
       };
     in

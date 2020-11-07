@@ -78,6 +78,7 @@ installing depdendencies. The restrictions of that package apply here too.
 
 instead of running emacs.d/bin/doom, once you have update your config files (packages.el, init.el, config.el), rebuild doom-emacs with nix. If you are using home-manager, simply run `home-manager switch`
 
+
 ## Troubleshooting
 
 On macOS on a fresh install, you might run into the error `Too many files open`. running `ulimit -S -n 2048` will only work for the duration of your shell and will fix the error
@@ -103,3 +104,16 @@ in your configuration, you would add the following:
 ```
 to make the git dependency available.
 trying to rebuild doom-emacs with `home-manager switch` should work correctly now.
+
+## Using the daemon
+
+to use the daemon, simply enable the emacs service (with nixos or nix-darwin) and use the doom emacs package. `doom-emacs` will need to be referenced at the top of your config file.
+
+```nix
+services.emacs = {
+  enable = true;
+  package = doom-emacs;
+}
+```
+
+to connect to the daemon you can now run `emacsclient -c`

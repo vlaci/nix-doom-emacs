@@ -5,10 +5,10 @@
         "homepage": "",
         "owner": "hlissner",
         "repo": "doom-emacs",
-        "rev": "adff1aa68da379370cfd6a7605fc15c28ade52f1",
-        "sha256": "1655jhcvjjgz6gf0j8aaxvfylh81m5d86bq2x1li3q6vpd1n9j27",
+        "rev": "57ef63d6ba8432067a2c32cca3f5ccd369d21099",
+        "sha256": "1zsw33mb2j852phql6qqqd7yr41h67azy3g5603fx212lfhzai1m",
         "type": "tarball",
-        "url": "https://github.com/hlissner/doom-emacs/archive/adff1aa68da379370cfd6a7605fc15c28ade52f1.tar.gz",
+        "url": "https://github.com/hlissner/doom-emacs/archive/57ef63d6ba8432067a2c32cca3f5ccd369d21099.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "doom-snippets": {
@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "a65baf3d03b54cf9282c30cbcc5895e29be84ff2",
-        "sha256": "1b21b5xqqh7avhb240szhnj9d9b7ya02a8bf9pv2i2wx7dw37ikn",
+        "rev": "489f44aa462cea641d344e6b744296b3c07427a6",
+        "sha256": "1i44w1668w0wj3qsnxrfm6ln0x1cs0ljlxj6303c9jpr1mpg9fgc",
         "type": "tarball",
-        "url": "https://github.com/nix-community/emacs-overlay/archive/a65baf3d03b54cf9282c30cbcc5895e29be84ff2.tar.gz",
+        "url": "https://github.com/nix-community/emacs-overlay/archive/489f44aa462cea641d344e6b744296b3c07427a6.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "emacs-so-long": {

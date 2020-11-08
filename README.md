@@ -106,12 +106,12 @@ trying to rebuild doom-emacs with `home-manager switch` should work correctly no
 
 ## Using the daemon
 
-to use the daemon, simply enable the emacs service (with nixos or nix-darwin) and use the doom emacs package. `doom-emacs` will need to be referenced at the top of your config file.
+to use the daemon, simply enable the emacs service (with nixos, home-manager or nix-darwin) and use the doom emacs package. `doom-emacs` will need to be referenced at the top of your config file.
 
 ```nix
 services.emacs = {
   enable = true;
-  package = doom-emacs;
+  package = doom-emacs;  # use programs.emacs.package instead if using home-manager
 }
 ```
 

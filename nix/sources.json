@@ -5,10 +5,10 @@
         "homepage": "",
         "owner": "hlissner",
         "repo": "doom-emacs",
-        "rev": "57ef63d6ba8432067a2c32cca3f5ccd369d21099",
-        "sha256": "1zsw33mb2j852phql6qqqd7yr41h67azy3g5603fx212lfhzai1m",
+        "rev": "f7293fb67ef701244a421fd3bfc04b8e12689edc",
+        "sha256": "0y13d0qf34hxlz57k5434q3gknl0gdng9gmrjxgqfnzqdz1q7pdy",
         "type": "tarball",
-        "url": "https://github.com/hlissner/doom-emacs/archive/57ef63d6ba8432067a2c32cca3f5ccd369d21099.tar.gz",
+        "url": "https://github.com/hlissner/doom-emacs/archive/f7293fb67ef701244a421fd3bfc04b8e12689edc.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "doom-snippets": {
@@ -17,10 +17,10 @@
         "homepage": "",
         "owner": "hlissner",
         "repo": "doom-snippets",
-        "rev": "d97c65eec3ba9a920432761acdcd8b5e851c9c0d",
-        "sha256": "09dim0l6sfh1bkqdcs3ian3d755ijf51qrcsvlv39j11g25xd3y7",
+        "rev": "e1cbbdf526224066f6bb67f95672d329323ecb1c",
+        "sha256": "0dppd50ajxrljcnifqg66l2d8jklfax7l1n3ffc13iw38g0b3s5w",
         "type": "tarball",
-        "url": "https://github.com/hlissner/doom-snippets/archive/d97c65eec3ba9a920432761acdcd8b5e851c9c0d.tar.gz",
+        "url": "https://github.com/hlissner/doom-snippets/archive/e1cbbdf526224066f6bb67f95672d329323ecb1c.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "emacs-overlay": {
@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "489f44aa462cea641d344e6b744296b3c07427a6",
-        "sha256": "1i44w1668w0wj3qsnxrfm6ln0x1cs0ljlxj6303c9jpr1mpg9fgc",
+        "rev": "1b6c001fd93989f05633d66858d9f82ba58c151e",
+        "sha256": "1f34q8cqc4k82hy3r81fpv6gycfb4qsa47kifnxh7idma9rfasrp",
         "type": "tarball",
-        "url": "https://github.com/nix-community/emacs-overlay/archive/489f44aa462cea641d344e6b744296b3c07427a6.tar.gz",
+        "url": "https://github.com/nix-community/emacs-overlay/archive/1b6c001fd93989f05633d66858d9f82ba58c151e.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "emacs-so-long": {

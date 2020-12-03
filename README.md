@@ -39,7 +39,7 @@ Using `flake.nix`:
 {
   inputs = {
     home-manager.url = "github:rycee/home-manager";
-    nix-doom-emacs.url = "github:vlaci/nix-doom-emacs/flake";
+    nix-doom-emacs.url = "github:vlaci/nix-doom-emacs";
   };
 
   outputs = {
@@ -56,7 +56,7 @@ Using `flake.nix`:
         {
           home-manager.users.exampleUser = { pkgs, ... }: {
             imports = [ nix-doom-emacs.hmModule ];
-            home.doom-emacs = {
+            programs.doom-emacs = {
               enable = true;
               doomPrivateDir = ./doom.d;
             };

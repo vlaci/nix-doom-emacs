@@ -228,6 +228,14 @@ emacs.overrideAttrs (esuper:
                     --set __DEBUG_doom_emacs_DIR ${doom-emacs} \
                     --set __DEBUG_doomLocal_DIR ${doomLocal}
       done
+      ${lib.optionalString stdenv.isDarwin ''
+        if [[ -e $out/Applications ]]; then
+          wrapProgram "$out/Applications/Emacs.app/Contents/MacOS/Emacs" \
+                      --set DOOMDIR ${doomDir} \
+                      --set __DEBUG_doom_emacs_DIR ${doom-emacs} \
+                      --set __DEBUG_doomLocal_DIR ${doomLocal}
+        fi
+      ''}
       # emacsWithPackages assumes share/emacs/site-lisp/subdirs.el
       # exists, but doesn't pass it along.  When home-manager calls
       # emacsWithPackages again on this derivation, it fails due to

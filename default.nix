@@ -222,20 +222,20 @@ let
 in
 emacs.overrideAttrs (esuper:
   let cmd = ''
-      for prog in $out/bin/*; do
-        wrapProgram $out/bin/$(basename $prog) \
+      wrapEmacs() {
+          wrapProgram $1 \
                     --set DOOMDIR ${doomDir} \
                     --set __DEBUG_doom_emacs_DIR ${doom-emacs} \
                     --set __DEBUG_doomLocal_DIR ${doomLocal}
+      }
+
+      for prog in $out/bin/*; do
+          wrapEmacs $prog
       done
-      ${lib.optionalString stdenv.isDarwin ''
-        if [[ -e $out/Applications ]]; then
-          wrapProgram "$out/Applications/Emacs.app/Contents/MacOS/Emacs" \
-                      --set DOOMDIR ${doomDir} \
-                      --set __DEBUG_doom_emacs_DIR ${doom-emacs} \
-                      --set __DEBUG_doomLocal_DIR ${doomLocal}
-        fi
-      ''}
+
+      if [[ -e $out/Applications ]]; then
+        wrapEmacs "$out/Applications/Emacs.app/Contents/MacOS/Emacs"
+      fi
       # emacsWithPackages assumes share/emacs/site-lisp/subdirs.el
       # exists, but doesn't pass it along.  When home-manager calls
       # emacsWithPackages again on this derivation, it fails due to

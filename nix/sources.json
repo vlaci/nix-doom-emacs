@@ -5,10 +5,10 @@
         "homepage": "",
         "owner": "hlissner",
         "repo": "doom-emacs",
-        "rev": "110d70bdff12c61fb4bfebf8e9f6b3a18684076d",
-        "sha256": "05i5yad3pivkvmsj1hss1bvkk4qzgxs911yyhmxl5ypxwbkklmi5",
+        "rev": "d88e0795b68bd0a261872b2c1e80b7b567a862ae",
+        "sha256": "0p0v6ljc7mkqc0pyjvbhdjbd36c57nh5a6ikgvcfkijhfmf4gg5a",
         "type": "tarball",
-        "url": "https://github.com/hlissner/doom-emacs/archive/110d70bdff12c61fb4bfebf8e9f6b3a18684076d.tar.gz",
+        "url": "https://github.com/hlissner/doom-emacs/archive/d88e0795b68bd0a261872b2c1e80b7b567a862ae.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "doom-snippets": {

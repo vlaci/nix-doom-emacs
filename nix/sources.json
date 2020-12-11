@@ -65,10 +65,10 @@
         "homepage": null,
         "owner": "hlissner",
         "repo": "evil-org-mode",
-        "rev": "658dadfe2700f08323ece3efb1af48657b9446df",
-        "sha256": "1khvdg7i80kqvrjpj9gjwafigjwjjj9804c4x6pbnh5vf2l9fx6j",
+        "rev": "a9706da260c45b98601bcd72b1d2c0a24a017700",
+        "sha256": "0n5c5ysp5cvwb1814lhnslz41rjw79932ybx204y5s6dh1ajl717",
         "type": "tarball",
-        "url": "https://github.com/hlissner/evil-org-mode/archive/658dadfe2700f08323ece3efb1af48657b9446df.tar.gz",
+        "url": "https://github.com/hlissner/evil-org-mode/archive/a9706da260c45b98601bcd72b1d2c0a24a017700.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "evil-quick-diff": {

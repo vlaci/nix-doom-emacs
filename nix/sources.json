@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "4d7fdb786637213e2ff45bb868e27eb21a234f06",
-        "sha256": "0m92fdrbz8x275y0h8pgy3g80rqgm66p9r253bxwhk2vbkmg6j4h",
+        "rev": "f0b8ce50c8cbd5a4cf51cab0abb6db27220b00f2",
+        "sha256": "1nl0iawllzr9wmp8093kk95a2mipxas5l83jybdv5r0xlhpdcdx8",
         "type": "tarball",
-        "url": "https://github.com/nix-community/emacs-overlay/archive/4d7fdb786637213e2ff45bb868e27eb21a234f06.tar.gz",
+        "url": "https://github.com/nix-community/emacs-overlay/archive/f0b8ce50c8cbd5a4cf51cab0abb6db27220b00f2.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "emacs-so-long": {

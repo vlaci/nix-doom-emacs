@@ -41,4 +41,6 @@
 
 ;; just use straight provided by nix
 (advice-add 'doom-initialize-core-packages
-            :override (lambda (&rest r) (require 'straight)))
+            :override (lambda (&rest r)
+                        (require 'straight)
+                        (straight--make-build-cache-available)))

@@ -20,7 +20,7 @@ in
         The specified directory should  contain yoour `init.el`, `config.el` and
         `packages.el` files.
       '';
-      apply = path: builtins.path { inherit path; };
+      apply = path: if lib.isStorePath path then path else builtins.path { inherit path; };
     };
     extraConfig = mkOption {
       description = ''

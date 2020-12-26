@@ -5,10 +5,10 @@
         "homepage": "",
         "owner": "hlissner",
         "repo": "doom-emacs",
-        "rev": "d88e0795b68bd0a261872b2c1e80b7b567a862ae",
-        "sha256": "0p0v6ljc7mkqc0pyjvbhdjbd36c57nh5a6ikgvcfkijhfmf4gg5a",
+        "rev": "febf960c4e6247f20946fd0a832bf5d3c3febaf3",
+        "sha256": "1jk0n6y1qp38wbwxsgb498x63mlnv7z44b43b4wx1ifdfhn9jvng",
         "type": "tarball",
-        "url": "https://github.com/hlissner/doom-emacs/archive/d88e0795b68bd0a261872b2c1e80b7b567a862ae.tar.gz",
+        "url": "https://github.com/hlissner/doom-emacs/archive/febf960c4e6247f20946fd0a832bf5d3c3febaf3.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "doom-snippets": {
@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "4d7fdb786637213e2ff45bb868e27eb21a234f06",
-        "sha256": "0m92fdrbz8x275y0h8pgy3g80rqgm66p9r253bxwhk2vbkmg6j4h",
+        "rev": "f0b8ce50c8cbd5a4cf51cab0abb6db27220b00f2",
+        "sha256": "1nl0iawllzr9wmp8093kk95a2mipxas5l83jybdv5r0xlhpdcdx8",
         "type": "tarball",
-        "url": "https://github.com/nix-community/emacs-overlay/archive/4d7fdb786637213e2ff45bb868e27eb21a234f06.tar.gz",
+        "url": "https://github.com/nix-community/emacs-overlay/archive/f0b8ce50c8cbd5a4cf51cab0abb6db27220b00f2.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "emacs-so-long": {
@@ -65,10 +65,10 @@
         "homepage": null,
         "owner": "hlissner",
         "repo": "evil-org-mode",
-        "rev": "658dadfe2700f08323ece3efb1af48657b9446df",
-        "sha256": "1khvdg7i80kqvrjpj9gjwafigjwjjj9804c4x6pbnh5vf2l9fx6j",
+        "rev": "a9706da260c45b98601bcd72b1d2c0a24a017700",
+        "sha256": "0n5c5ysp5cvwb1814lhnslz41rjw79932ybx204y5s6dh1ajl717",
         "type": "tarball",
-        "url": "https://github.com/hlissner/evil-org-mode/archive/658dadfe2700f08323ece3efb1af48657b9446df.tar.gz",
+        "url": "https://github.com/hlissner/evil-org-mode/archive/a9706da260c45b98601bcd72b1d2c0a24a017700.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "evil-quick-diff": {
@@ -137,10 +137,10 @@
         "homepage": "https://code.orgmode.org/bzg/org-mode",
         "owner": "emacs-straight",
         "repo": "org-mode",
-        "rev": "f874644e5b767efdf80b439de3e1cf6c847b25da",
-        "sha256": "0qklgn05qa13nn90zg825y74wqb7419n8lavm7lf76w45qaq8ajb",
+        "rev": "0571aa70106f5d8dbc2241064626f92f58dbd383",
+        "sha256": "1257wvj39z6cd34d23p9vmqi1273zkxrfkc3x2gbyaq2cnfp5db3",
         "type": "tarball",
-        "url": "https://github.com/emacs-straight/org-mode/archive/f874644e5b767efdf80b439de3e1cf6c847b25da.tar.gz",
+        "url": "https://github.com/emacs-straight/org-mode/archive/0571aa70106f5d8dbc2241064626f92f58dbd383.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "org-yt": {

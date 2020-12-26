@@ -245,7 +245,9 @@ emacs.overrideAttrs (esuper:
       ln -s ${esuper.emacs}/share $out
       ${build-summary}
     '';
-  in
+  in {
+    inherit doom-emacs;
+  } // (
     if esuper ? buildCommand then
       {
         buildCommand = esuper.buildCommand + cmd;
@@ -256,4 +258,5 @@ emacs.overrideAttrs (esuper:
       }
     else
       abort "emacsWithPackages uses unknown derivation type"
+  )
 )

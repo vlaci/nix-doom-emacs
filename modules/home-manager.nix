@@ -93,6 +93,7 @@ in
       home.file.".emacs.d/init.el".text = ''
         (load "default.el")
       '';
+      home.file.".emacs.d/early-init.el".source = "${emacs.doom-emacs}/early-init.el";
       home.packages = with pkgs; [
         emacs-all-the-icons-fonts
       ];

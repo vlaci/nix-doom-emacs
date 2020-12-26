@@ -70,7 +70,12 @@
     rotate-text.flake = false;
   };
 
-  outputs = inputs: {
-      hmModule = import ./modules/home-manager.nix inputs;
+  outputs = { nixpkgs, ... }@inputs: {
+    hmModule = import ./modules/home-manager.nix inputs;
+    checks."x86_64-linux".init-example-el =
+      let
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+      in
+        pkgs.callPackage ./. { doomPrivateDir = ./test/doom.d; dependencyOverrides = inputs; };
   };
 }

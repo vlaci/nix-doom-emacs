@@ -1,4 +1,4 @@
-name: "Test"
+name: "Check Build"
 on:
   pull_request:
   push:
@@ -6,7 +6,8 @@ on:
       - master
       - develop
 jobs:
-  tests:
+  check:
+    name: Flake Check
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -18,4 +19,24 @@ jobs:
         install_url: https://github.com/numtide/nix-flakes-installer/releases/download/nix-2.4pre20201221_9fab14a/install
         extra_nix_config: |
           experimental-features = nix-command flakes
-    - run: nix flake check -L
+    - name: Retrieve /nix/store archive
+      uses: actions/cache@v2
+      id: cache-nix-store
+      with:
+        path: nix-store.dump
+        key: nix-store-${{ hashFiles('flake.*') }}
+        restore-keys: |
+          nix-store-
+    - name: Import /nix/store contents
+      if: ${{ steps.cache-nix-store.outputs.cache-hit }}
+      run: |
+        if [[ -f nix-store.dump ]]; then
+          nix-store --import < nix-store.dump || true
+          rm nix-store.dump
+        fi
+    - run: |
+        nix flake check -L
+    - name: Export /nix/store contents
+      if: ${{ !steps.cache-nix-store.outputs.cache-hit }}
+      run: |
+        nix-store --export $(nix-store -qR /nix/store/*-doom-emacs) > nix-store.dump

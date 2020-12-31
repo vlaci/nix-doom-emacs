@@ -104,7 +104,7 @@ let
   # Stage 2: install dependencies and byte-compile prepared source
   doomLocal =
     let
-      straight-env = pkgs.callPackage (lock "nix-straight.el") {
+      straight-env = pkgs.callPackage (lock "nix-straight") {
         emacsPackages =
           if bundledPackages then
             let

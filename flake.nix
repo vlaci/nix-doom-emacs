@@ -52,8 +52,8 @@
     evil-quick-diff.flake = false;
     explain-pause-mode.url = "github:lastquestion/explain-pause-mode";
     explain-pause-mode.flake = false;
-    "nix-straight.el".url = "github:vlaci/nix-straight.el/v2.1.0";
-    "nix-straight.el".flake = false;
+    nix-straight.url = "github:vlaci/nix-straight.el/v2.1.0";
+    nix-straight.flake = false;
     nose.url= "github:emacsattic/nose";
     nose.flake = false;
     ob-racket.url = "github:xchrishawk/ob-racket";
@@ -64,10 +64,10 @@
     org-yt.flake = false;
     php-extras.url = "github:arnested/php-extras";
     php-extras.flake = false;
-    "reveal.js".url = "github:hakimel/reveal.js";
-    "reveal.js".flake = false;
-    "rotate-text.el".url = "github:debug-ito/rotate-text.el";
-    "rotate-text.el".flake = false;
+    revealjs.url = "github:hakimel/reveal.js";
+    revealjs.flake = false;
+    rotate-text.url = "github:debug-ito/rotate-text.el";
+    rotate-text.flake = false;
   };
 
   outputs = inputs: {

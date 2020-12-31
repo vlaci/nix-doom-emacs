@@ -72,8 +72,7 @@ self: super: {
   };
 
   revealjs = self.straightBuild {
-    pname = "reveal.js";
-    ename = "revealjs";
+    pname = "revealjs";
 
     installPhase = ''
       LISPDIR=$out/share/emacs/site-lisp
@@ -84,8 +83,7 @@ self: super: {
   };
 
   rotate-text = self.straightBuild {
-    pname = "rotate-text.el";
-    ename = "rotate-text";
+    pname = "rotate-text";
   };
 
   so-long = self.straightBuild {

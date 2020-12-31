@@ -1,5 +1,11 @@
 # nix-doom-emacs
 
+|     | Status |
+| --- | --- |
+| Build on `master` | [![Build Status on master](https://github.com/vlaci/nix-doom-emacs/workflows/Check%20Build/badge.svg?branch=master&event=push)](https://github.com/vlaci/nix-doom-emacs/actions?query=workflow%3ACheck%20Build+branch%3Amaster+event%3Apush) |
+| Build on `develop` | [![Build Status on develop](https://github.com/vlaci/nix-doom-emacs/workflows/Check%20Build/badge.svg?branch=develop&event=push)](https://github.com/vlaci/nix-doom-emacs/actions?query=workflow%3ACheck%20Build+branch%3Adevelop+event%3Apush) |
+| Dependency updater | [![Dependency Updater Status](https://github.com/vlaci/nix-doom-emacs/workflows/Update%20Dependencies/badge.svg?branch=master)](https://github.com/vlaci/nix-doom-emacs/actions?query=workflow%3AUpdate%20Dependencies+branch%3Amaster+event%3Apush) |
+
 Nix expression to install and configure
 [doom-emacs](https://github.com/hlissner/doom-emacs).
 

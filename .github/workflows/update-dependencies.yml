@@ -23,3 +23,9 @@ jobs:
         GITHUB_BASE_BRANCH: develop
       run: |
         nix develop -c .github/workflows/update_flake_lock.py
+    - name: Create PR for updated init.el
+      env:
+        GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_BASE_BRANCH: develop
+      run: |
+        nix develop -c .github/workflows/update_init_el.py

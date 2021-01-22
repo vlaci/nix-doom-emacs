@@ -137,10 +137,10 @@
         "homepage": "https://code.orgmode.org/bzg/org-mode",
         "owner": "emacs-straight",
         "repo": "org-mode",
-        "rev": "2a4578b103a9f5e70f50523cf6b28655a56c2cbe",
-        "sha256": "0gcynwmqmvsryjw0bscjci7ll9xw3k1yqa06w9pp312dk500ycgh",
+        "rev": "a8df7670c8f7d52d779e1d8e922d519b0aec3afb",
+        "sha256": "01rcp3kp41zrm43qg7c5v0422mpdi1kciqq2nnbhhns91p3hgv35",
         "type": "tarball",
-        "url": "https://github.com/emacs-straight/org-mode/archive/2a4578b103a9f5e70f50523cf6b28655a56c2cbe.tar.gz",
+        "url": "https://github.com/emacs-straight/org-mode/archive/a8df7670c8f7d52d779e1d8e922d519b0aec3afb.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "org-yt": {

@@ -66,10 +66,10 @@
 , writeTextDir }:
 
 let
-  sources = import ./nix/sources.nix;
+  flake = import ./flake-compat-helper.nix { src=./.; };
   lock = p: if dependencyOverrides ? ${p}
             then dependencyOverrides.${p}
-            else sources.${p};
+            else flake.inputs.${p};
   # Packages we need to get the default doom configuration run
   overrides = self: super:
     (pkgs.callPackage ./overrides.nix { inherit lock; } self super) // (emacsPackagesOverlay self super);
@@ -104,7 +104,7 @@ let
   # Stage 2: install dependencies and byte-compile prepared source
   doomLocal =
     let
-      straight-env = pkgs.callPackage (lock "nix-straight.el") {
+      straight-env = pkgs.callPackage (lock "nix-straight") {
         emacsPackages =
           if bundledPackages then
             let

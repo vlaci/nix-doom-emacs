@@ -1,12 +1,18 @@
 # nix-doom-emacs
 
+|     | Status |
+| --- | --- |
+| Build on `master` | [![Build Status on master](https://github.com/vlaci/nix-doom-emacs/workflows/Check%20Build/badge.svg?branch=master&event=push)](https://github.com/vlaci/nix-doom-emacs/actions?query=workflow%3ACheck%20Build+branch%3Amaster+event%3Apush) |
+| Build on `develop` | [![Build Status on develop](https://github.com/vlaci/nix-doom-emacs/workflows/Check%20Build/badge.svg?branch=develop&event=push)](https://github.com/vlaci/nix-doom-emacs/actions?query=workflow%3ACheck%20Build+branch%3Adevelop+event%3Apush) |
+| Dependency updater | [![Dependency Updater Status](https://github.com/vlaci/nix-doom-emacs/workflows/Update%20Dependencies/badge.svg?branch=master)](https://github.com/vlaci/nix-doom-emacs/actions?query=workflow%3AUpdate%20Dependencies+branch%3Amaster+event%3Apush) |
+
 Nix expression to install and configure
 [doom-emacs](https://github.com/hlissner/doom-emacs).
 
 The expression builds a `doom-emacs` distribution with dependencies
 pre-installed based on an existing `~/.doom.d` directory.
 
-It is not a fully fledged exprerience as some dependenices are not installed and
+It is not a fully fledged experience as some dependencies are not installed and
 some may not be fully compatible as the version available in NixOS or
 [emacs-overlay](https://github.com/nix-community/emacs-overlay) may not be
 compatible with the `doom-emacs` requirements.
@@ -32,6 +38,10 @@ in {
   '';
 }
 ```
+
+`./doom.d` should contain the following three files: `config.el`, `init.el` and
+`packages.el`. If you don't already have an existing `doom-emacs` configuration,
+you can use the contents of `test/doom.d` as a template.
 
 Using `flake.nix`:
 
@@ -72,7 +82,7 @@ Using `flake.nix`:
 
 This expression leverages
 [nix-straight.el](https://github.com/vlaci/nix-straight.el) under the hood for
-installing depdendencies. The restrictions of that package apply here too.
+installing dependencies. The restrictions of that package apply here too.
 
 ## Usage
 
@@ -84,13 +94,15 @@ On macOS on a fresh install, you might run into the error `Too many files open`.
 
 ## Installing emacs packages
 
-In the initial packages.el instructions for how to install packages can be found.
-However some packages might require a particular software dependency to be installed.
-Trying to install those would give you an error of the type:
+In the initial packages.el instructions for how to install packages can be
+found. However some packages might require a particular software dependency to
+be installed. Trying to install those would give you an error of the type:
 `Searching for program: No such file or directory, git` (Missing git dependency)
-Here is how you would go installing [magit-delta](https://github.com/dandavison/magit-delta) for example (which requires git).
+Here is how you would go installing
+[magit-delta](https://github.com/dandavison/magit-delta) for example (which
+requires git).
 
-under the line:
+Under the line:
 `doomPrivateDir = ./doom.d;`
 in your configuration, you would add the following:
 
@@ -101,12 +113,15 @@ in your configuration, you would add the following:
      });
   };
 ```
-to make the git dependency available.
-trying to rebuild doom-emacs with `home-manager switch` should work correctly now.
+
+To make the git dependency available. trying to rebuild doom-emacs with
+`home-manager switch` should work correctly now.
 
 ## Using the daemon
 
-to use the daemon, simply enable the emacs service (with nixos, home-manager or nix-darwin) and use the doom emacs package. `doom-emacs` will need to be referenced at the top of your config file.
+To use the daemon, simply enable the emacs service (with `NixOS`, `home-manager`
+or `nix-darwin`) and use the doom emacs package. `doom-emacs` will need to be
+referenced at the top of your config file.
 
 ```nix
 services.emacs = {

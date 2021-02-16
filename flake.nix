@@ -85,12 +85,6 @@
         {
           devShell = pkgs.mkShell { buildInputs = [ (pkgs.python3.withPackages (ps: with ps; [ PyGithub ])) ]; };
         }) //
-    eachSystem [ "x86_64-linux" ]
-      (system: {
-        checks = {
-          init-example-el = nixpkgs.legacyPackages.${system}.callPackage ./. { doomPrivateDir = ./test/doom.d; dependencyOverrides = inputs; };
-        };
-      }) //
     {
       hmModule = import ./modules/home-manager.nix inputs;
     };

@@ -1,4 +1,4 @@
-{ lock, dune }:
+{ lock, ocamlPackages }:
 
 self: super: {
   straightBuild = { pname, ... }@args: self.trivialBuild ({
@@ -97,7 +97,7 @@ self: super: {
 
   # dune has a nontrivial derivation, which does not buildable from the melpa
   # wrapper falling back to the one in nixpkgs
-  dune = dune.overrideAttrs (old: {
+  dune = ocamlPackages.dune_2.overrideAttrs (old: {
     # Emacs derivations require an ename attribute
     ename = old.pname;
 

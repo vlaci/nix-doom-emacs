@@ -52,7 +52,7 @@
     evil-quick-diff.flake = false;
     explain-pause-mode.url = "github:lastquestion/explain-pause-mode";
     explain-pause-mode.flake = false;
-    nix-straight.url = "github:vlaci/nix-straight.el/v2.1.0";
+    nix-straight.url = "github:vlaci/nix-straight.el/v2.2.0";
     nix-straight.flake = false;
     nose.url= "github:emacsattic/nose";
     nose.flake = false;

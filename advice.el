@@ -11,7 +11,12 @@
 (with-eval-after-load "comp"
   ;; The advice for 'kill-emacs would result in eln files being written before
   ;; doom would set up proper load paths
-  (add-to-list 'comp-never-optimize-functions 'kill-emacs))
+  (when (boundp 'comp-never-optimize-functions)
+    ;; TODO Remove this when emacs 28 become stable.
+    (add-to-list 'comp-never-optimize-functions 'kill-emacs))
+  (when (boundp 'native-comp-never-optimize-functions)
+    (add-to-list 'native-comp-never-optimize-functions 'kill-emacs))
+  )
 
 (defun nix-straight-inhibit-kill-emacs (arg)
   (message "[nix-doom-emacs] Inhibiting (kill-emacs)"))

@@ -225,6 +225,7 @@ emacs.overrideAttrs (esuper:
       wrapEmacs() {
           wrapProgram $1 \
                     --set DOOMDIR ${doomDir} \
+                    --set NIX_DOOM_EMACS_BINARY $1 \
                     --set __DEBUG_doom_emacs_DIR ${doom-emacs} \
                     --set __DEBUG_doomLocal_DIR ${doomLocal}
       }

@@ -71,6 +71,10 @@ self: super: {
     pname = "php-extras";
   };
 
+  restart-emacs = super.restart-emacs.overrideAttrs (esuper: {
+    patches = [ ./restart-emacs.patch ];
+  });
+
   revealjs = self.straightBuild {
     pname = "revealjs";
 

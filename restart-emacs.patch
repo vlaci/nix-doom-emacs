@@ -1,0 +1,22 @@
+--- a/restart-emacs.el	1970-01-01 02:00:01.000000000 +0200
++++ b/restart-emacs.el	2021-06-13 14:37:50.520954543 +0300
+@@ -94,12 +94,13 @@
+   "Get absolute path to binary of currently running Emacs.
+ 
+ On Windows get path to runemacs.exe if possible."
+-  (let ((emacs-binary-path (expand-file-name invocation-name invocation-directory))
+-        (runemacs-binary-path (when (memq system-type '(windows-nt ms-dos))
+-                                (expand-file-name "runemacs.exe" invocation-directory))))
+-    (if (and runemacs-binary-path (file-exists-p runemacs-binary-path))
+-        runemacs-binary-path
+-      emacs-binary-path)))
++  (if (getenv "NIX_DOOM_EMACS_BINARY") (getenv "NIX_DOOM_EMACS_BINARY")
++    (let ((emacs-binary-path (expand-file-name invocation-name invocation-directory))
++          (runemacs-binary-path (when (memq system-type '(windows-nt ms-dos))
++                                  (expand-file-name "runemacs.exe" invocation-directory))))
++      (if (and runemacs-binary-path (file-exists-p runemacs-binary-path))
++          runemacs-binary-path
++        emacs-binary-path))))
+ 
+ (defun restart-emacs--record-tty-file (current &rest ignored)
+   "Save the buffer which is being currently selected in the frame.

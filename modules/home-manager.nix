@@ -98,6 +98,10 @@ in
       ];
       programs.emacs.package = emacs;
       programs.emacs.enable = true;
+
+      # Set the service's package but don't enable. Leave that up to the user
+      services.emacs.package = emacs;
+
       programs.doom-emacs.package = emacs;
     }
   );

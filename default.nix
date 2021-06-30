@@ -81,7 +81,7 @@ let
     phases = ["unpackPhase" "patchPhase" "installPhase"];
     patches = [
       (substituteAll {
-        src = ./fix-paths.patch;
+        src = ./prepare-src.patch;
         private = builtins.toString doomPrivateDir;
       })
     ];

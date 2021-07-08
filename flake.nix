@@ -73,7 +73,7 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { nixpkgs, flake-utils, ... }@inputs:
+  outputs = { self, nixpkgs, flake-utils, ... }@inputs:
     let
       inherit (flake-utils.lib) eachDefaultSystem eachSystem;
     in
@@ -93,5 +93,6 @@
       }) //
     {
       hmModule = import ./modules/home-manager.nix inputs;
+      lib.build = { pkgs, ... }@args: pkgs.callPackage self ({ dependencyOverrides = inputs;  } // removeAttrs args [ "pkgs" ]);
     };
 }

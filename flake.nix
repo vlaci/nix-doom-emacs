@@ -77,7 +77,7 @@
     flake-utils.url = "github:numtide/flake-utils";
   };
 
-  outputs = { nixpkgs, flake-utils, ... }@inputs:
+  outputs = { self, nixpkgs, flake-utils, ... }@inputs:
     let
       inherit (flake-utils.lib) eachDefaultSystem eachSystem;
     in
@@ -88,6 +88,10 @@
         in
         {
           devShell = pkgs.mkShell { buildInputs = [ (pkgs.python3.withPackages (ps: with ps; [ PyGithub ])) ]; };
+          package =  { dependencyOverrides ? { }, ...}@args:
+            pkgs.callPackage self (
+              args // { dependencyOverrides = (inputs // dependencyOverrides); }
+            );
         }) //
     eachSystem [ "x86_64-linux" ]
       (system: {

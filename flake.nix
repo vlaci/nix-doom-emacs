@@ -58,8 +58,10 @@
     nose.flake = false;
     ob-racket.url = "github:xchrishawk/ob-racket";
     ob-racket.flake = false;
-    org-mode.url = "github:emacs-straight/org-mode";
-    org-mode.flake = false;
+    org-contrib.url = "git+https://git.sr.ht/~bzg/org-contrib";
+    org-contrib.flake = false;
+    org.url = "github:emacs-straight/org-mode";
+    org.flake = false;
     org-yt.url = "github:TobiasZawada/org-yt";
     org-yt.flake = false;
     php-extras.url = "github:arnested/php-extras";

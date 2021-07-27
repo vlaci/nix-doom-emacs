@@ -1,8 +1,8 @@
 { self, ... }@inputs:
-{ config, lib, pkgs, ... }:
+{ options, config, lib, pkgs, ... }:
 let
   cfg = config.programs.doom-emacs;
-  inherit (lib) literalExample mkEnableOption mkIf mkOption types;
+  inherit (lib) literalExample mkEnableOption mkIf mkMerge mkOption optional types;
   overlayType = lib.mkOptionType {
     name = "overlay";
     description = "Emacs packages overlay";
@@ -89,20 +89,24 @@ in
         dependencyOverrides = inputs;
       };
     in
-    {
-      home.file.".emacs.d/init.el".text = ''
-        (load "default.el")
-      '';
-      home.packages = with pkgs; [
-        emacs-all-the-icons-fonts
-      ];
-      programs.emacs.package = emacs;
-      programs.emacs.enable = true;
+    mkMerge ([
+      {
+        home.file.".emacs.d/init.el".text = ''
+          (load "default.el")
+        '';
+        home.packages = with pkgs; [
+          emacs-all-the-icons-fonts
+        ];
+        programs.emacs.package = emacs;
+        programs.emacs.enable = true;
 
+        programs.doom-emacs.package = emacs;
+      }
+    ]
+    # this option is not available on darwin platform.
+    ++ optional (options.services ? emacs) {
       # Set the service's package but don't enable. Leave that up to the user
       services.emacs.package = emacs;
-
-      programs.doom-emacs.package = emacs;
-    }
+    })
   );
 }

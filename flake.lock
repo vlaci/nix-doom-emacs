@@ -208,20 +208,36 @@
         "type": "github"
       }
     },
-    "org-mode": {
+    "org": {
       "flake": false,
       "locked": {
-        "lastModified": 1626291384,
-        "narHash": "sha256-HxsTCj03rRES2o7I4yNAWM1jeAzqCvUdnwlwc+NkPEQ=",
+        "lastModified": 1627155762,
+        "narHash": "sha256-XS1eA6P0ePabdrnUNe5lN19EA9dfK615gMGObr9wfBQ=",
         "owner": "emacs-straight",
         "repo": "org-mode",
-        "rev": "604bfd9d755770e12c368c15148780ec723211df",
+        "rev": "c9dfed48a607c7f6524f1c6480f09cf61a5d6237",
         "type": "github"
       },
       "original": {
         "owner": "emacs-straight",
         "repo": "org-mode",
         "type": "github"
+      }
+    },
+    "org-contrib": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1623339452,
+        "narHash": "sha256-E3pioqkmAKQm5N7YsgJZil0/ozkdRE7//tE9FGbrluM=",
+        "ref": "master",
+        "rev": "fc81309cf6756607a836f93049a9393c2967c4e0",
+        "revCount": 2599,
+        "type": "git",
+        "url": "https://git.sr.ht/~bzg/org-contrib"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.sr.ht/~bzg/org-contrib"
       }
     },
     "org-yt": {
@@ -287,7 +303,8 @@
         "nixpkgs": "nixpkgs",
         "nose": "nose",
         "ob-racket": "ob-racket",
-        "org-mode": "org-mode",
+        "org": "org",
+        "org-contrib": "org-contrib",
         "org-yt": "org-yt",
         "php-extras": "php-extras",
         "revealjs": "revealjs",

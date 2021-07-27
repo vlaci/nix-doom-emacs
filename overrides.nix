@@ -46,8 +46,16 @@ self: super: {
     pname = "nose";
   };
 
-  org-mode = self.straightBuild rec {
-    pname = "org-mode";
+  org-contrib = self.straightBuild {
+    pname = "org-contrib";
+    installPhase = ''
+      mkdir -p $out/share/emacs/site-lisp
+       cp -r lisp/* $out/share/emacs/site-lisp
+    '';
+  };
+
+  org = self.straightBuild rec {
+    pname = "org";
     version = "9.4";
     installPhase = ''
       LISPDIR=$out/share/emacs/site-lisp

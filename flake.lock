@@ -156,7 +156,6 @@
       },
       "original": {
         "owner": "vlaci",
-        "ref": "v2.2.0",
         "repo": "nix-straight.el",
         "type": "github"
       }

@@ -8,6 +8,8 @@ self: super: {
     buildPhase = ":";
   } // args);
 
+  straight = self.straightBuild { pname = "straight"; };
+
   evil-escape = super.evil-escape.overrideAttrs (esuper: {
     patches = [ ./evil-escape.patch ];
   });

@@ -54,6 +54,8 @@
     explain-pause-mode.flake = false;
     nix-straight.url = "github:vlaci/nix-straight.el";
     nix-straight.flake = false;
+    straight.url = "github:raxod502/straight.el";
+    straight.flake = false;
     nose.url= "github:emacsattic/nose";
     nose.flake = false;
     ob-racket.url = "github:xchrishawk/ob-racket";

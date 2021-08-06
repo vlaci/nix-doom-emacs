@@ -147,11 +147,11 @@
     "nix-straight": {
       "flake": false,
       "locked": {
-        "lastModified": 1621543597,
-        "narHash": "sha256-E/m2Hrw2og//CfOCOWe2yapYC01Tqhozn4YMPYJsC3o=",
+        "lastModified": 1628233688,
+        "narHash": "sha256-xah4uHtPY2Rx3t7BQkaGSStO3tSqEsT4M0IripEnHng=",
         "owner": "vlaci",
         "repo": "nix-straight.el",
-        "rev": "8e84d04f10b2298de856b2b8b9a0d13abc91b5ca",
+        "rev": "aec5f224d1b3498841d830aad71dd10913d803d2",
         "type": "github"
       },
       "original": {
@@ -307,7 +307,8 @@
         "org-yt": "org-yt",
         "php-extras": "php-extras",
         "revealjs": "revealjs",
-        "rotate-text": "rotate-text"
+        "rotate-text": "rotate-text",
+        "straight": "straight"
       }
     },
     "rotate-text": {
@@ -323,6 +324,22 @@
       "original": {
         "owner": "debug-ito",
         "repo": "rotate-text.el",
+        "type": "github"
+      }
+    },
+    "straight": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1614449383,
+        "narHash": "sha256-fzIvJ5sDNDtF0w8t1WtM2SpnWT8zM2RG/EiSthy1URU=",
+        "owner": "raxod502",
+        "repo": "straight.el",
+        "rev": "e1390a933b6f5a15079d6dec91eac97a17aad10c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "raxod502",
+        "repo": "straight.el",
         "type": "github"
       }
     }

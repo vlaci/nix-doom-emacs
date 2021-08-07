@@ -147,11 +147,11 @@
     "nix-straight": {
       "flake": false,
       "locked": {
-        "lastModified": 1628233688,
-        "narHash": "sha256-xah4uHtPY2Rx3t7BQkaGSStO3tSqEsT4M0IripEnHng=",
+        "lastModified": 1628328207,
+        "narHash": "sha256-ZWdev0HyxmKIdzLetPKiNK7Hh5gBuCnGwqgq95aNf5k=",
         "owner": "vlaci",
         "repo": "nix-straight.el",
-        "rev": "aec5f224d1b3498841d830aad71dd10913d803d2",
+        "rev": "4bb7a6267d0bbb76d7bf4168ada1fb4eec1b735f",
         "type": "github"
       },
       "original": {
@@ -330,11 +330,11 @@
     "straight": {
       "flake": false,
       "locked": {
-        "lastModified": 1614449383,
-        "narHash": "sha256-fzIvJ5sDNDtF0w8t1WtM2SpnWT8zM2RG/EiSthy1URU=",
+        "lastModified": 1623633709,
+        "narHash": "sha256-taLIYnjs9sD8N8PuGO2F7l+O69u0dNPunwzFVTlXjUM=",
         "owner": "raxod502",
         "repo": "straight.el",
-        "rev": "e1390a933b6f5a15079d6dec91eac97a17aad10c",
+        "rev": "1e27b0590df77a5d478970ca58fd6606971692f5",
         "type": "github"
       },
       "original": {

@@ -147,11 +147,11 @@
     "nix-straight": {
       "flake": false,
       "locked": {
-        "lastModified": 1628328207,
-        "narHash": "sha256-ZWdev0HyxmKIdzLetPKiNK7Hh5gBuCnGwqgq95aNf5k=",
+        "lastModified": 1628630968,
+        "narHash": "sha256-eh5QpnX3F8/0iKv1BvyU3KyZ/ksLlRegcd5c41pm/L8=",
         "owner": "vlaci",
         "repo": "nix-straight.el",
-        "rev": "4bb7a6267d0bbb76d7bf4168ada1fb4eec1b735f",
+        "rev": "e3f8aaff9ba889c6f2ee6c6d349736d21f21c685",
         "type": "github"
       },
       "original": {

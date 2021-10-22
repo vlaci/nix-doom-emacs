@@ -1,0 +1,24 @@
+Causes build failure because git is not a dependency. Since doom-src
+lives in the immutable nix store anyway, there is no point in trying to
+deploy git hooks there.
+---
+ core/cli/install.el | 3 ---
+ 1 file changed, 3 deletions(-)
+
+diff --git a/core/cli/install.el b/core/cli/install.el
+index ac7787949..009f16902 100644
+--- a/core/cli/install.el
++++ b/core/cli/install.el
+@@ -73,9 +73,6 @@ name. e.g.
+     (print! "Regenerating autoloads files")
+     (doom-autoloads-reload)
+ 
+-    (print! "Deploying commit-msg and pre-push git hooks")
+-    (doom-cli--ci-deploy-hooks)
+-
+     (cond (nofonts-p)
+           (IS-WINDOWS
+            (print! (warn "Doom cannot install all-the-icons' fonts on Windows!\n"))
+-- 
+2.33.0
+

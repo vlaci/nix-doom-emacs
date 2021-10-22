@@ -84,6 +84,7 @@ let
         src = ./fix-paths.patch;
         private = builtins.toString doomPrivateDir;
       })
+      ./dont-deploy-git-hooks.patch
     ];
     installPhase = ''
       mkdir -p $out

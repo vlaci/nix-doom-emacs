@@ -220,41 +220,44 @@ let
       printf "${fmt.bold}  ==> Dependencies are installed to ${doomLocal}${fmt.reset}\n"
   '';
 in
-emacs.overrideAttrs (esuper:
-  let cmd = ''
-      wrapEmacs() {
-          wrapProgram $1 \
-                    --set DOOMDIR ${doomDir} \
-                    --set NIX_DOOM_EMACS_BINARY $1 \
-                    --set __DEBUG_doom_emacs_DIR ${doom-emacs} \
-                    --set __DEBUG_doomLocal_DIR ${doomLocal}
-      }
+{
+  emacs = emacs.overrideAttrs (esuper:
+    let cmd = ''
+        wrapEmacs() {
+            wrapProgram $1 \
+                      --set DOOMDIR ${doomDir} \
+                      --set NIX_DOOM_EMACS_BINARY $1 \
+                      --set __DEBUG_doom_emacs_DIR ${doom-emacs} \
+                      --set __DEBUG_doomLocal_DIR ${doomLocal}
+        }
 
-      for prog in $out/bin/*; do
-          wrapEmacs $prog
-      done
+        for prog in $out/bin/*; do
+            wrapEmacs $prog
+        done
 
-      if [[ -e $out/Applications ]]; then
-        wrapEmacs "$out/Applications/Emacs.app/Contents/MacOS/Emacs"
-      fi
-      # emacsWithPackages assumes share/emacs/site-lisp/subdirs.el
-      # exists, but doesn't pass it along.  When home-manager calls
-      # emacsWithPackages again on this derivation, it fails due to
-      # a dangling link to subdirs.el.
-      # https://github.com/NixOS/nixpkgs/issues/66706
-      rm -rf $out/share
-      ln -s ${esuper.emacs}/share $out
-      ${build-summary}
-    '';
-  in
-    if esuper ? buildCommand then
-      {
-        buildCommand = esuper.buildCommand + cmd;
-      }
-    else if esuper ? installPhase then
-      {
-        installPhase = esuper.installPhase + cmd;
-      }
-    else
-      abort "emacsWithPackages uses unknown derivation type"
-)
+        if [[ -e $out/Applications ]]; then
+          wrapEmacs "$out/Applications/Emacs.app/Contents/MacOS/Emacs"
+        fi
+        # emacsWithPackages assumes share/emacs/site-lisp/subdirs.el
+        # exists, but doesn't pass it along.  When home-manager calls
+        # emacsWithPackages again on this derivation, it fails due to
+        # a dangling link to subdirs.el.
+        # https://github.com/NixOS/nixpkgs/issues/66706
+        rm -rf $out/share
+        ln -s ${esuper.emacs}/share $out
+        ${build-summary}
+      '';
+    in
+      if esuper ? buildCommand then
+        {
+          buildCommand = esuper.buildCommand + cmd;
+        }
+      else if esuper ? installPhase then
+        {
+          installPhase = esuper.installPhase + cmd;
+        }
+      else
+        abort "emacsWithPackages uses unknown derivation type"
+  );
+  doom = doom-emacs;
+}

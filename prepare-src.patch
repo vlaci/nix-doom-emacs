@@ -1,3 +1,16 @@
+diff --git a/bin/doom b/bin/doom
+index 8dc0fcc84..260809044 100755
+--- a/bin/doom
++++ b/bin/doom
+@@ -128,7 +128,7 @@
+       (set-file-modes script #o600))
+     ;; Error code 128 is special: it means run the post-script after this
+     ;; session ends.
+-    128)
++    0)
+    ;; Anything else (e.g. booleans) is treated as a successful run. Yes, a `nil'
+    ;; indicates a successful run too!
+    (_ 0)))
 diff --git a/core/autoload/config.el b/core/autoload/config.el
 index 1e643cf49..501cbfba4 100644
 --- a/core/autoload/config.el

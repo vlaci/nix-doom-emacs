@@ -1,3 +1,5 @@
+**:warning: I no longer use or develop this package. Use the (nix-community)[https://github.com/nix-community/nix-doom-emacs] mirror instead.**
+
 # nix-doom-emacs
 
 |     | Status |

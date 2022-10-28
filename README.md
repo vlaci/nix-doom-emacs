@@ -34,7 +34,7 @@ let
                                 # and packages.el files
   };
 in {
-  home.packages = [ doom-emacs ];
+  home.packages = [ doom-emacs.emacs ];
   home.file.".emacs.d/init.el".text = ''
       (load "default.el")
   '';
@@ -128,7 +128,7 @@ referenced at the top of your config file.
 ```nix
 services.emacs = {
   enable = true;
-  package = doom-emacs;  # use programs.emacs.package instead if using home-manager
+  package = doom-emacs.emacs;  # use programs.emacs.package instead if using home-manager
 }
 ```
 

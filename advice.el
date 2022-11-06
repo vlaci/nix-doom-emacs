@@ -49,3 +49,7 @@
             :override (lambda (&rest r)
                         (require 'straight)
                         (straight--make-build-cache-available)))
+
+;; no-op ci hooks, see: https://github.com/hlissner/doom-emacs/pull/5862
+(advice-add 'doom-cli--ci-deploy-hooks
+            :override (lambda (&rest r)))
